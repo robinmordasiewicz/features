@@ -1,11 +1,11 @@
 {
     "name": "Nerd Fonts",
     "id": "nerd-fonts",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Install nerd fonts.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-contrib/features/curl-apt-get",
-        "./features/setup"
+        "ghcr.io/robinmordasiewicz/features/setup"
     ]
 }

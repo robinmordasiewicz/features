@@ -1,12 +1,12 @@
 {
     "name": "MkDocs Python Environment",
     "id": "mkdocs-environment",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Create the python environment for mkdocs serve and compiling",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/rocker-org/devcontainer-features/miniforge",
-        "./features/update-conda"
+        "ghcr.io/robinmordasiewicz/features/update-conda"
     ],
     "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval \"\$(conda shell.bash hook)\" >/dev/null 2>&1 && conda activate mkdocs && nohup bash -c 'mkdocs serve --dev-addr 0.0.0.0:8081 &' >/tmp/mkdocs.tmp"
 }

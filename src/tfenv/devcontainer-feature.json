@@ -1,10 +1,10 @@
 {
     "name": "Terraform version manager",
     "id": "tfenv",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Install Terraform Environment manager and install the latest version of terraform",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
-        "./features/container-dotfiles"
+        "ghcr.io/robinmordasiewicz/features/container-dotfiles"
     ]
 }

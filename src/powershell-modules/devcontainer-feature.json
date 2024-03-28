@@ -1,7 +1,7 @@
 {
     "name": "PowerShell Modules",
     "id": "powershell-modules",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Install powershell modules",
     "options": {
         "extensions": {
@@ -19,8 +19,8 @@
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-contrib/features/curl-apt-get",
-        "./features/container-dotfiles",
-        "./features/tfenv",
+        "ghcr.io/robinmordasiewicz/features/container-dotfiles",
+        "ghcr.io/robinmordasiewicz/features/tfenv",
         "ghcr.io/devcontainers/features/powershell"
     ]
 }

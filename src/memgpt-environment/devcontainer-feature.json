@@ -1,13 +1,13 @@
 {
   "name": "MeMGPT Python Environment",
   "id": "memgpt-environment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create the python environment for memgpt",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
     "ghcr.io/rocker-org/devcontainer-features/miniforge",
     "ghcr.io/itsmechlark/features/postgresql",
-    "./features/update-conda"
+    "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "customizations": {
     "vscode": {
