@@ -2,7 +2,7 @@
     "name": "FortiDevSec Extension",
     "id": "fortidevsec",
     "version": "23.4.107-0.0.1",
-    "documentation": "https://docs.fortinet.com/document/fortidevsec/23.4.a/user-guide/546812/introduction",
+    "documentationUrl": "https://docs.fortinet.com/document/fortidevsec/23.4.a/user-guide/546812/introduction",
     "description": "Find and fix all types of application security issues within your DevOps CI/CD cycle using FortiDevSec, a comprehensive SaaS-based tool for software developers and DevOps.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
