@@ -1,0 +1,12 @@
+---
+name: jupyter
+channels:
+  - defaults
+dependencies:
+  - python=3.11.8
+  - pip
+  - pip:
+    - jupyterlab
+    - jupyterlab-lsp
+    - python-lsp-server[all]
+prefix: /opt/conda/envs/jupyter

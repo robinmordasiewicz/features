@@ -1,0 +1,11 @@
+{
+    "name": "OpenWeb UI Python Environment",
+    "id": "openwebui-environment",
+    "version": "0.0.1",
+    "description": "Create the python environment for openwebui",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "./features/update-conda"
+    ]
+}

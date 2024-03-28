@@ -1,0 +1,15 @@
+{
+  "name": "Autogen Python Environment",
+  "id": "autogen-environment",
+  "version": "0.0.1",
+  "description": "Create the python environment for autogen",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge",
+    "./features/update-conda"
+  ],
+  "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval $(conda shell.bash hook) >/dev/null 2>&1 && conda activate autogen && nohup bash -c 'autogenstudio ui --host 0.0.0.0 --appdir /data/autogenstudio --port 8081 &' >/tmp/autogen.tmp",
+  "appPort": [
+    "8081:8081"
+  ]
+}

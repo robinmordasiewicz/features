@@ -1,0 +1,11 @@
+{
+    "name": "Chunking Python Environment",
+    "id": "chunking-environment",
+    "version": "0.0.1",
+    "description": "Create the python environment for chunking",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "./features/update-conda"
+    ]
+}

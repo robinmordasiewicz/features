@@ -1,0 +1,26 @@
+{
+    "name": "PowerShell Modules",
+    "id": "powershell-modules",
+    "version": "0.0.2",
+    "description": "Install powershell modules",
+    "options": {
+        "extensions": {
+            "type": "string",
+            "proposals": [
+                "github.vscode-github-actions",
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-vscode.powershell"
+            ],
+            "default": "",
+            "description": "Supply a list of pre-installed powershell modules"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-contrib/features/curl-apt-get",
+        "./features/container-dotfiles",
+        "./features/tfenv",
+        "ghcr.io/devcontainers/features/powershell"
+    ]
+}

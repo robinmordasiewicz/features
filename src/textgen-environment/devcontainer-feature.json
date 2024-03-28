@@ -1,0 +1,11 @@
+{
+    "name": "TextGen Python Environment",
+    "id": "textgen-environment",
+    "version": "0.0.1",
+    "description": "Create the python environment for textgen",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "./features/update-conda"
+    ]
+}

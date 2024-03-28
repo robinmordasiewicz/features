@@ -1,0 +1,39 @@
+{
+  "name": "MeMGPT Python Environment",
+  "id": "memgpt-environment",
+  "version": "0.0.1",
+  "description": "Create the python environment for memgpt",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge",
+    "ghcr.io/itsmechlark/features/postgresql",
+    "./features/update-conda"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-ossdata.vscode-postgresql",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
+      ],
+      "settings": {
+        "sqltools.connections": [
+          {
+            "name": "Container database",
+            "driver": "PostgreSQL",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres"
+          }
+        ]
+      }
+    }
+  },
+  "containerEnv": {
+    "PGDATA": "/data/postgresql",
+    "PGUSER": "postgres"
+  }
+}

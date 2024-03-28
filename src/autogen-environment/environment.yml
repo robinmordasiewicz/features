@@ -1,0 +1,28 @@
+---
+name: autogen
+channels:
+  - defaults
+dependencies:
+  - python=3.11.8
+  - pip
+  - pip:
+    - autogenra
+    - autogenstudio==0.0.55
+    - beautifulsoup4
+    - httpx
+    - matplotlib
+    - nltk
+    - numpy
+    - pandas
+    - pillow
+    - prompt_toolkit
+    - pyautogen[teachable,lmm,retrievechat,mathchat,blendsearch]==0.2.19
+    - pydoc-markdown
+    - pytest
+    - requests
+    - seaborn
+    - scikit-learn
+    - tensorflow[and-cuda]==2.16.1
+    - unstructured[all-docs]
+    - urllib3
+prefix: /opt/conda/envs/autogen

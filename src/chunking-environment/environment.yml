@@ -1,0 +1,16 @@
+---
+name: chunking
+channels:
+  - defaults
+dependencies:
+  - python=3.11.8
+  - pip
+  - pip :
+    - chromadb
+    - langchain
+    - llama-index
+    - langchain_experimental
+    - langchain_openai
+    - langchainhub
+    - rich
+prefix: /opt/conda/envs/chunking

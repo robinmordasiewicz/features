@@ -1,0 +1,25 @@
+{
+  "name": "Jupyter Python Environment",
+  "id": "jupyter-environment",
+  "version": "0.0.1",
+  "description": "Create the python environment for jupyter",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge",
+    "./features/update-conda"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-powertoys"
+      ]
+    }
+  },
+  "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval $(conda shell.bash hook) >/dev/null 2>&1 && conda activate jupyter && nohup bash -c 'jupyter-lab --port 8888 &' >/tmp/jupyter.tmp",
+  "appPort": [
+    "8888:8888"
+  ]
+}

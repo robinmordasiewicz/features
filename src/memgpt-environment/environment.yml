@@ -1,0 +1,16 @@
+---
+name: memgpt
+channels:
+  - defaults
+dependencies:
+  - python=3.11.8
+  - pip
+  - pip :
+    - pymemgpt[local,postgres]
+    - pyautogen[teachable]
+    - llama-index-core
+    - llama-index-readers-file
+    - llama-index-llms-ollama
+    - llama-index-embeddings-huggingface
+    - pg8000
+prefix: /opt/conda/envs/memgpt

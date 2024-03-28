@@ -1,0 +1,8 @@
+name: openwebui
+channels:
+  - defaults
+dependencies:
+  - python=3.11.8
+  - pip
+  - pip:
+prefix: /usr/local/conda/envs/openwebui
