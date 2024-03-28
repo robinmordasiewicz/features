@@ -25,9 +25,6 @@
   "onCreateCommand": {
     "ollama-persistence-setup": "/usr/local/share/ollama/oncreate.sh"
   },
-  "appPort": [
-    "11434:11434"
-  ],
   "containerEnv": {
     "OLLAMA_HOST": "0.0.0.0"
   }

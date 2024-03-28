@@ -3,7 +3,7 @@
     "id": "oh-my-posh",
     "version": "0.0.1",
     "description": "A prompt theme engine for any shell.",
-    "documentation": "https://ohmyposh.dev/docs",
+    "documentationURL": "https://ohmyposh.dev/docs",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-contrib/features/curl-apt-get"

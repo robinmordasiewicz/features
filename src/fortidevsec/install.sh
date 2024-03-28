@@ -1,7 +1,7 @@
 #!/bin/env bash
 set -e
 
-VSIXVERSION=$(jq -r '.build' devcontainer-feature.json)
+VSIXVERSION=$(jq -r '.version' devcontainer-feature.json | cut -f 1 -d "-")
 VSIXVENDOR=$(jq -r '.id' devcontainer-feature.json)
 PACKAGE="$(pwd)/${VSIXVENDOR}-v${VSIXVERSION}.vsix"
 
