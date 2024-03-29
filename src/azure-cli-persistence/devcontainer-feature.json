@@ -1,6 +1,6 @@
 {
   "dependsOn": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
+    "ghcr.io/devcontainers/features/azure-cli": {}
   },
   "description": "Avoid extra logins from the Azure CLI by preserving the `~/.azure` folder across container instances.",
   "documentationURL": "https://github.com/joshuanianji/devcontainer-features/tree/main/src/azure-cli-persistence",
@@ -21,6 +21,5 @@
   "onCreateCommand": {
     "azure-cli-persistence-setup": "/usr/local/share/azure-cli-persistence/scripts/oncreate.sh"
   },
-  "options": {},
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
