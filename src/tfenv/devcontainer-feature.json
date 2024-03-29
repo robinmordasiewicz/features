@@ -1,7 +1,7 @@
 {
     "name": "Terraform version manager",
     "id": "tfenv",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Install Terraform Environment manager and install the latest version of terraform",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
