@@ -11,10 +11,6 @@ Avoid extra logins from the Azure CLI by preserving the `~/.azure` folder across
 }
 ```
 
-## Options
-
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
 
 
 ## OS and Architecture Support
