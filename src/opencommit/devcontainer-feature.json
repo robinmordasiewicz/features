@@ -8,11 +8,7 @@
   },
   "description": "opencommit using ollama",
   "id": "opencommit",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/node"
-  ],
   "name": "opencommit",
   "onCreateCommand": "git config --global --add safe.directory `pwd` && oco hook set || continue",
-  "version": "0.0.14"
+  "version": "0.0.15"
 }

@@ -1,6 +1,6 @@
 {
   "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
   },
   "description": "Find and fix all types of application security issues within your DevOps CI/CD cycle using FortiDevSec, a comprehensive SaaS-based tool for software developers and DevOps.",
   "documentationURL": "https://docs.fortinet.com/document/fortidevsec/23.4.a/user-guide/546812/introduction",
@@ -10,5 +10,5 @@
     "ghcr.io/devcontainers-contrib/features/curl-apt-get"
   ],
   "name": "FortiDevSec Extension",
-  "version": "23.4.107-0.0.2"
+  "version": "23.4.107-0.0.3"
 }

@@ -1,13 +1,9 @@
 {
   "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+    "ghcr.io/devcontainers/features/node": {}
   },
   "description": "Install node modules global",
   "id": "npm-globals",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/node"
-  ],
   "name": "NPM Global Modules",
   "options": {
     "extensions": {
@@ -22,5 +18,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.3"
+  "version": "0.0.5"
 }

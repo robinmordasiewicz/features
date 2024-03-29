@@ -1,13 +1,9 @@
 {
   "dependsOn": {
-    "ghcr.io/devcontainers/features/powershell:1": {}
+    "ghcr.io/devcontainers/features/powershell": {}
   },
   "description": "Install powershell modules",
   "id": "powershell-modules",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/powershell"
-  ],
   "name": "PowerShell Modules",
   "options": {
     "extensions": {
