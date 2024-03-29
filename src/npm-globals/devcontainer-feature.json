@@ -1,4 +1,7 @@
 {
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+  },
   "description": "Install node modules global",
   "id": "npm-globals",
   "installsAfter": [
@@ -11,13 +14,13 @@
       "default": "",
       "description": "Supply a list of pre-installed node modules",
       "proposals": [
-        "github.vscode-github-actions",
-        "ms-azuretools.vscode-docker",
-        "ms-python.python",
-        "ms-vscode.powershell"
+        "gatsby-cli",
+        "javascript-typescript-langserver",
+        "jsonlint",
+        "newman"
       ],
       "type": "string"
     }
   },
-  "version": "0.0.1"
+  "version": "0.0.3"
 }

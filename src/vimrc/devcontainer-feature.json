@@ -1,4 +1,8 @@
 {
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+    "ghcr.io/guiyomh/features/vim:1": {}
+  },
   "description": "Install vimrc customizations",
   "id": "vimrc",
   "installsAfter": [
@@ -7,5 +11,5 @@
     "ghcr.io/guiyomh/features/vim"
   ],
   "name": "vim customization",
-  "version": "0.0.2"
+  "version": "0.0.4"
 }

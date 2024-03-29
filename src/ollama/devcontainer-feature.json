@@ -2,6 +2,9 @@
   "containerEnv": {
     "OLLAMA_HOST": "0.0.0.0"
   },
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {}
+  },
   "description": "Installs ollama",
   "documentationURL": "https://github.com/prulloac/devcontainer-features/tree/main/src/ollama",
   "entrypoint": "ollama serve",
@@ -27,5 +30,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.2"
+  "version": "0.0.4"
 }

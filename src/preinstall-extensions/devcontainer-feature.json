@@ -1,4 +1,7 @@
 {
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+  },
   "description": "Preinstall VSCode Extensions",
   "id": "preinstall-extensions",
   "installsAfter": [
@@ -19,5 +22,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

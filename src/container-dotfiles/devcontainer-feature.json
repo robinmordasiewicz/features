@@ -1,4 +1,10 @@
 {
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:1": {},
+    "ghcr.io/robinmordasiewicz/features/azure-cli-persistence:0": {},
+    "ghcr.io/robinmordasiewicz/features/oh-my-posh:0": {}
+  },
   "description": "Install shell shell rc files into container.",
   "id": "container-dotfiles",
   "installsAfter": [
@@ -14,5 +20,5 @@
   ],
   "name": "Container Dotfiles",
   "onCreateCommand": "yes y | az config set auto-upgrade.enable=yes && yes y | az config set auto-upgrade.prompt=no && mkdir -p ~/.azure/bin || continue && ln -s /usr/local/bin/bicep ~/.azure/bin/bicep || continue",
-  "version": "0.0.26"
+  "version": "0.0.27"
 }

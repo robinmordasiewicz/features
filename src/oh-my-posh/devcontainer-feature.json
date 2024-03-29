@@ -2,6 +2,9 @@
   "containerEnv": {
     "POSH_THEMES_PATH": "/usr/local/share/oh-my-posh"
   },
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+  },
   "description": "A prompt theme engine for any shell.",
   "documentationURL": "https://ohmyposh.dev/docs",
   "id": "oh-my-posh",
@@ -10,5 +13,5 @@
     "ghcr.io/devcontainers-contrib/features/curl-apt-get"
   ],
   "name": "oh-my-posh",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
