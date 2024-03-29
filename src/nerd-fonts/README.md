@@ -11,7 +11,11 @@ Install nerd fonts.
 }
 ```
 
+## Options
 
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| fonts | Supply a list of nerd-fonts to install | string | Meslo |
 
 
 
