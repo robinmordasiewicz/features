@@ -6,6 +6,9 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+# Clean up
+rm -rf /var/lib/apt/lists/*
+
 apt_get_update()
 {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
@@ -24,7 +27,7 @@ check_packages() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-check_packages fontconfig-config
+check_packages fontconfig
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
