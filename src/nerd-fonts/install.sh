@@ -6,21 +6,10 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
-# Clean up
-rm -rf /var/lib/apt/lists/*
-
-apt_get_update()
-{
-    if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
-        echo "Running apt-get update..."
-        apt-get update -y
-    fi
-}
-
 # Checks if packages are installed and installs them if not
 check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
-        apt_get_update
+        apt-get update -y
         apt-get -y install --no-install-recommends "$@"
     fi
 }
@@ -38,8 +27,8 @@ rm -rf /var/lib/apt/lists/*
 #if [ ! -d /usr/share/fonts/NerdFonts ];then
 #    mkdir -p /usr/share/fonts/NerdFonts
 #fi
-
-curl -s https://github.com/ryanoasis/nerd-fonts/blob/master/install.sh | bash -s -- --clean --install-to-system-path Meslo
-
 #unzip ${WORKINGDIR}/fonts.zip -d /usr/share/fonts/NerdFonts"
 #fc-cache /usr/share/fonts
+
+#curl -s https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh | bash -s -- --clean --install-to-system-path Meslo
+git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh --install-to-system-path Meslo && cd ../ && rm -rf nerd-fonts
