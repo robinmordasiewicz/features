@@ -6,6 +6,8 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+FONTS=${FONTS:-undefined}
+
 # Checks if packages are installed and installs them if not
 check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
@@ -21,14 +23,17 @@ check_packages fontconfig
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
-#WORKINGDIR=$(pwd)
-#DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r '.assets[] | select(.name=="Meslo.zip").browser_download_url')
-#curl -L -o fonts.zip ${DOWNLOADLOCATION}
-#if [ ! -d /usr/share/fonts/NerdFonts ];then
-#    mkdir -p /usr/share/fonts/NerdFonts
-#fi
-#unzip ${WORKINGDIR}/fonts.zip -d /usr/share/fonts/NerdFonts"
-#fc-cache /usr/share/fonts
+if [ ! -d /usr/share/fonts/NerdFonts ];then
+  mkdir -p /usr/share/fonts/NerdFonts
+fi
 
-#curl -s https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh | bash -s -- --clean --install-to-system-path Meslo
-git clone https://github.com/ryanoasis/nerd-fonts.git && cd nerd-fonts && ./install.sh --install-to-system-path Meslo && cd ../ && rm -rf nerd-fonts
+IFS=',' read -ra FONTS_ARRAY <<< "$FONTS"
+
+for FONT in "${FONTS_ARRAY[@]}"; do
+  DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r --arg FONT "${FONT}.tar.xz" '.assets[] | select(.name==$FONT).browser_download_url')
+  if [ -n ${DOWNLOADLOCATION} ];
+    curl -L ${DOWNLOADLOCATION} | tar -xJf - -C /usr/share/fonts/NerdFonts/${FONT}
+  fi
+done
+
+fc-cache /usr/share/fonts

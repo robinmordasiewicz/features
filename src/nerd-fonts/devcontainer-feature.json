@@ -8,5 +8,18 @@
   "documentationURL": "https://www.nerdfonts.com",
   "id": "nerd-fonts",
   "name": "Nerd Fonts",
-  "version": "0.0.8"
+  "options": {
+    "fonts": {
+      "default": "Meslo",
+      "description": "Supply a list of nerd-fonts to install",
+      "proposals": [
+        "Meslo",
+        "MartianMono",
+        "FiraCode",
+        "JetBrainsMono"
+      ],
+      "type": "string"
+    }
+  },
+  "version": "0.0.10"
 }
