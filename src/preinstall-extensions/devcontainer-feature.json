@@ -4,10 +4,6 @@
   },
   "description": "Preinstall VSCode Extensions",
   "id": "preinstall-extensions",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get"
-  ],
   "name": "Preinstall Extensions",
   "options": {
     "extensions": {
@@ -22,5 +18,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
