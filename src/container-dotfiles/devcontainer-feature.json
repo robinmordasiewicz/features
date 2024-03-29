@@ -20,5 +20,5 @@
   ],
   "name": "Container Dotfiles",
   "onCreateCommand": "yes y | az config set auto-upgrade.enable=yes && yes y | az config set auto-upgrade.prompt=no && mkdir -p ~/.azure/bin || continue && ln -s /usr/local/bin/bicep ~/.azure/bin/bicep || continue",
-  "version": "0.0.27"
+  "version": "0.0.28"
 }
