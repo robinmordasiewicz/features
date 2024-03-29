@@ -1,7 +1,7 @@
 {
   "dependsOn": {
     "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-    "ghcr.io/devcontainers-contrib/features/zsh-plugins:1": {},
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins": {},
     "ghcr.io/robinmordasiewicz/features/azure-cli-persistence:0": {},
     "ghcr.io/robinmordasiewicz/features/oh-my-posh:0": {}
   },
