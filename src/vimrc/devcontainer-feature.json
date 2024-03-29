@@ -1,11 +1,11 @@
 {
-    "name": "vim customization",
-    "id": "vimrc",
-    "version": "0.0.2",
-    "description": "Install vimrc customizations",
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers-contrib/features/curl-apt-get",
-        "ghcr.io/guiyomh/features/vim"
-    ]
+  "description": "Install vimrc customizations",
+  "id": "vimrc",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get",
+    "ghcr.io/guiyomh/features/vim"
+  ],
+  "name": "vim customization",
+  "version": "0.0.2"
 }

@@ -1,17 +1,17 @@
 {
-  "name": "opencommit",
-  "id": "opencommit",
-  "version": "0.0.14",
-  "description": "opencommit using ollama",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/node"
-  ],
   "containerEnv": {
     "OCO_AI_PROVIDER": "ollama"
   },
   "dependsOn": {
     "ghcr.io/devcontainers/features/node:1": {}
   },
-  "onCreateCommand": "git config --global --add safe.directory `pwd` && oco hook set || continue"
+  "description": "opencommit using ollama",
+  "id": "opencommit",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/node"
+  ],
+  "name": "opencommit",
+  "onCreateCommand": "git config --global --add safe.directory `pwd` && oco hook set || continue",
+  "version": "0.0.14"
 }

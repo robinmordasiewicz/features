@@ -1,12 +1,12 @@
 {
-  "name": "Autogen Python Environment",
-  "id": "autogen-environment",
-  "version": "0.0.2",
   "description": "Create the python environment for autogen",
+  "id": "autogen-environment",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
     "ghcr.io/rocker-org/devcontainer-features/miniforge",
     "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
-  "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval $(conda shell.bash hook) >/dev/null 2>&1 && conda activate autogen && nohup bash -c 'autogenstudio ui --host 0.0.0.0 --appdir /data/autogenstudio --port 8081 &' >/tmp/autogen.tmp"
+  "name": "Autogen Python Environment",
+  "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval $(conda shell.bash hook) >/dev/null 2>&1 && conda activate autogen && nohup bash -c 'autogenstudio ui --host 0.0.0.0 --appdir /data/autogenstudio --port 8081 &' >/tmp/autogen.tmp",
+  "version": "0.0.2"
 }

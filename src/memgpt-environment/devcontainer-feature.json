@@ -1,14 +1,8 @@
 {
-  "name": "MeMGPT Python Environment",
-  "id": "memgpt-environment",
-  "version": "0.0.2",
-  "description": "Create the python environment for memgpt",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/rocker-org/devcontainer-features/miniforge",
-    "ghcr.io/itsmechlark/features/postgresql",
-    "ghcr.io/robinmordasiewicz/features/update-conda"
-  ],
+  "containerEnv": {
+    "PGDATA": "/data/postgresql",
+    "PGUSER": "postgres"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -19,21 +13,27 @@
       "settings": {
         "sqltools.connections": [
           {
-            "name": "Container database",
+            "database": "postgres",
             "driver": "PostgreSQL",
+            "name": "Container database",
+            "password": "postgres",
+            "port": 5432,
             "previewLimit": 50,
             "server": "localhost",
-            "port": 5432,
-            "database": "postgres",
-            "username": "postgres",
-            "password": "postgres"
+            "username": "postgres"
           }
         ]
       }
     }
   },
-  "containerEnv": {
-    "PGDATA": "/data/postgresql",
-    "PGUSER": "postgres"
-  }
+  "description": "Create the python environment for memgpt",
+  "id": "memgpt-environment",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge",
+    "ghcr.io/itsmechlark/features/postgresql",
+    "ghcr.io/robinmordasiewicz/features/update-conda"
+  ],
+  "name": "MeMGPT Python Environment",
+  "version": "0.0.2"
 }

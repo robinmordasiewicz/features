@@ -1,26 +1,26 @@
 {
-    "name": "PowerShell Modules",
-    "id": "powershell-modules",
-    "version": "0.0.3",
-    "description": "Install powershell modules",
-    "options": {
-        "extensions": {
-            "type": "string",
-            "proposals": [
-                "github.vscode-github-actions",
-                "ms-azuretools.vscode-docker",
-                "ms-python.python",
-                "ms-vscode.powershell"
-            ],
-            "default": "",
-            "description": "Supply a list of pre-installed powershell modules"
-        }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers-contrib/features/curl-apt-get",
-        "ghcr.io/robinmordasiewicz/features/container-dotfiles",
-        "ghcr.io/robinmordasiewicz/features/tfenv",
-        "ghcr.io/devcontainers/features/powershell"
-    ]
+  "description": "Install powershell modules",
+  "id": "powershell-modules",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get",
+    "ghcr.io/robinmordasiewicz/features/container-dotfiles",
+    "ghcr.io/robinmordasiewicz/features/tfenv",
+    "ghcr.io/devcontainers/features/powershell"
+  ],
+  "name": "PowerShell Modules",
+  "options": {
+    "extensions": {
+      "default": "",
+      "description": "Supply a list of pre-installed powershell modules",
+      "proposals": [
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-vscode.powershell"
+      ],
+      "type": "string"
+    }
+  },
+  "version": "0.0.3"
 }

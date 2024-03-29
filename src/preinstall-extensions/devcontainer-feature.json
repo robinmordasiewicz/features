@@ -1,23 +1,23 @@
 {
-    "name": "Preinstall Extensions",
-    "id": "preinstall-extensions",
-    "version": "0.0.2",
-    "description": "Preinstall VSCode Extensions",
-    "options": {
-        "extensions": {
-            "type": "string",
-            "proposals": [
-                "github.vscode-github-actions",
-                "ms-azuretools.vscode-docker",
-                "ms-python.python",
-                "ms-vscode.powershell"
-            ],
-            "default": "",
-            "description": "Supply a list of pre-installed extensions"
-        }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers-contrib/features/curl-apt-get"
-    ]
+  "description": "Preinstall VSCode Extensions",
+  "id": "preinstall-extensions",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get"
+  ],
+  "name": "Preinstall Extensions",
+  "options": {
+    "extensions": {
+      "default": "",
+      "description": "Supply a list of pre-installed extensions",
+      "proposals": [
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-vscode.powershell"
+      ],
+      "type": "string"
+    }
+  },
+  "version": "0.0.2"
 }

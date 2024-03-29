@@ -1,17 +1,11 @@
 {
-  "name": "ollama",
-  "id": "ollama",
-  "version": "0.0.2",
+  "containerEnv": {
+    "OLLAMA_HOST": "0.0.0.0"
+  },
   "description": "Installs ollama",
   "documentationURL": "https://github.com/prulloac/devcontainer-features/tree/main/src/ollama",
-  "options": {
-    "models": {
-      "type": "string",
-      "default": "",
-      "description": "comma separated list of models to pull"
-    }
-  },
   "entrypoint": "ollama serve",
+  "id": "ollama",
   "installsAfter": [
     "ghcr.io/devcontainers/features/nvidia-cuda"
   ],
@@ -22,10 +16,16 @@
       "type": "volume"
     }
   ],
+  "name": "ollama",
   "onCreateCommand": {
     "ollama-persistence-setup": "/usr/local/share/ollama/oncreate.sh"
   },
-  "containerEnv": {
-    "OLLAMA_HOST": "0.0.0.0"
-  }
+  "options": {
+    "models": {
+      "default": "",
+      "description": "comma separated list of models to pull",
+      "type": "string"
+    }
+  },
+  "version": "0.0.2"
 }

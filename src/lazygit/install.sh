@@ -13,4 +13,3 @@ tar xf lazygit.tar.gz lazygit
 rm lazygit.tar.gz
 install lazygit /usr/local/bin
 rm lazygit
-

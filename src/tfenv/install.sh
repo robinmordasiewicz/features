@@ -12,4 +12,3 @@ fi
 su -l $_REMOTE_USER -c "$_REMOTE_USER_HOME/.tfenv/bin/tfenv install"
 su -l $_REMOTE_USER -c "$_REMOTE_USER_HOME/.tfenv/bin/tfenv use"
 echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> $_REMOTE_USER_HOME/.bashrc
-

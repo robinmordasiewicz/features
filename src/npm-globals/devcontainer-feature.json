@@ -1,23 +1,23 @@
 {
-    "name": "NPM Global Modules",
-    "id": "npm-globals",
-    "version": "0.0.1",
-    "description": "Install node modules global",
-    "options": {
-        "extensions": {
-            "type": "string",
-            "proposals": [
-                "github.vscode-github-actions",
-                "ms-azuretools.vscode-docker",
-                "ms-python.python",
-                "ms-vscode.powershell"
-            ],
-            "default": "",
-            "description": "Supply a list of pre-installed node modules"
-        }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers/features/node"
-    ]
+  "description": "Install node modules global",
+  "id": "npm-globals",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/node"
+  ],
+  "name": "NPM Global Modules",
+  "options": {
+    "extensions": {
+      "default": "",
+      "description": "Supply a list of pre-installed node modules",
+      "proposals": [
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-vscode.powershell"
+      ],
+      "type": "string"
+    }
+  },
+  "version": "0.0.1"
 }
