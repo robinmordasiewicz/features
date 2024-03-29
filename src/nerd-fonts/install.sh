@@ -23,16 +23,16 @@ check_packages fontconfig
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
-if [ ! -d /usr/share/fonts/NerdFonts ];then
-  mkdir -p /usr/share/fonts/NerdFonts
-fi
-
 IFS=',' read -ra FONTS_ARRAY <<< "$FONTS"
 
 for FONT in "${FONTS_ARRAY[@]}"; do
   DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r --arg FONT "${FONT}.tar.xz" '.assets[] | select(.name==$FONT).browser_download_url')
-  if [ -n ${DOWNLOADLOCATION} ];
-    curl -L ${DOWNLOADLOCATION} | tar -xJf - -C /usr/share/fonts/NerdFonts/${FONT}
+
+  if [[ -n "$DOWNLOADLOCATION" ]]; then
+    if [ ! -d "/usr/share/fonts/NerdFonts/$FONT" ];then
+      mkdir -p "/usr/share/fonts/NerdFonts/$FONT"
+    fi
+    curl -L "$DOWNLOADLOCATION" | tar -xJf - -C "/usr/share/fonts/NerdFonts/$FONT"
   fi
 done
 
