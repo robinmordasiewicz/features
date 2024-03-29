@@ -13,8 +13,8 @@ yes y | az config set auto-upgrade.prompt=no
 
 if command -v bicep &> /dev/null; then
   cmd_path=$(command -v bicep)
-  if [ ! -d ~/.azure/bin ];then
-    mkdir -p ~/.azure/bin
+  if [ ! -d ${HOME}/.azure/bin ];then
+    mkdir -p ${HOME}/.azure/bin
   fi
-  ln -sf "$cmd_path" "~/.azure/bin/bicep"
+  ln -sf "$cmd_path" ${HOME}/.azure/bin/bicep
 fi
