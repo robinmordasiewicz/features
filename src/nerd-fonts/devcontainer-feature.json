@@ -1,14 +1,14 @@
 {
-  "name": "Nerd Fonts",
-  "id": "nerd-fonts",
-  "version": "0.0.3",
-  "documentationURL": "https://www.nerdfonts.com",
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+  },
   "description": "Install nerd fonts.",
+  "documentationURL": "https://www.nerdfonts.com",
+  "id": "nerd-fonts",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
     "ghcr.io/devcontainers-contrib/features/curl-apt-get"
   ],
-  "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
-  }
+  "name": "Nerd Fonts",
+  "version": "0.0.4"
 }

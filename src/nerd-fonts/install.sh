@@ -24,7 +24,7 @@ check_packages() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-check_packages fontconfig curl
+check_packages fontconfig-config
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
