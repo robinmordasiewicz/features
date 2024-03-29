@@ -3,7 +3,8 @@
     "OCO_AI_PROVIDER": "ollama"
   },
   "dependsOn": {
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/git": {},
+    "ghcr.io/devcontainers/features/node": {}
   },
   "description": "opencommit using ollama",
   "id": "opencommit",
