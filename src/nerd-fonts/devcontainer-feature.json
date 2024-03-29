@@ -1,6 +1,7 @@
 {
   "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
+    "ghcr.io/devcontainers/features/common-utils": {}
   },
   "description": "Install nerd fonts.",
   "documentationURL": "https://www.nerdfonts.com",
@@ -10,5 +11,5 @@
     "ghcr.io/devcontainers-contrib/features/curl-apt-get"
   ],
   "name": "Nerd Fonts",
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
