@@ -1,4 +1,9 @@
 {
+  "containerEnv": {
+    "LANG": "en_US.UTF-8",
+    "LANGUAGE": "en_US.UTF-8",
+    "LC_ALL": "en_US.UTF-8"
+  },
   "dependsOn": {
     "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
   },
@@ -14,5 +19,5 @@
     "ghcr.io/robinmordasiewicz/features/vimrc"
   ],
   "name": "Container Dotfiles",
-  "version": "0.0.35"
+  "version": "0.0.36"
 }

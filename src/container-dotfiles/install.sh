@@ -1,6 +1,17 @@
 #!/bin/bash
 set -e
 
+check_packages() {
+    if ! dpkg -s "$@" > /dev/null 2>&1; then
+        apt-get update -y
+        apt-get -y install --no-install-recommends "$@"
+    fi
+}
+
+export DEBIAN_FRONTEND=noninteractive
+
+check_packages locales locales-all
+
 # shellcheck disable=SC2016
 su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init zsh --config /usr/local/share/oh-my-posh/powerlevel10k.omp.json)\"' >> $_REMOTE_USER_HOME/.zshrc"
 # shellcheck disable=SC2016
@@ -25,3 +36,5 @@ if command -v /opt/conda/bin/conda &> /dev/null; then
   su -l $_REMOTE_USER -c "/opt/conda/bin/conda init --all"
   su -l $_REMOTE_USER -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
+
+locales-all
