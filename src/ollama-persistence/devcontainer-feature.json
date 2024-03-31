@@ -3,12 +3,12 @@
     "OLLAMA_HOST": "0.0.0.0"
   },
   "dependsOn": {
-    "ghcr.io/devcontainers/features/nvidia-cuda": {}
+    "ghcr.io/devcontainers/features/nvidia-cuda": {},
+    "ghcr.io/prulloac/devcontainer-features/ollama": {}
   },
-  "description": "Installs ollama",
+  "description": "Installs LLMs",
   "documentationURL": "https://github.com/prulloac/devcontainer-features/tree/main/src/ollama",
-  "entrypoint": "ollama serve",
-  "id": "ollama",
+  "id": "ollama-persistence",
   "mounts": [
     {
       "source": "${devcontainerId}-ollama",
@@ -16,9 +16,9 @@
       "type": "volume"
     }
   ],
-  "name": "ollama",
+  "name": "ollama-persistence",
   "onCreateCommand": {
-    "ollama-persistence-setup": "/usr/local/share/ollama/oncreate.sh"
+    "ollama-persistence": "/usr/local/share/ollama/oncreate.sh"
   },
   "options": {
     "models": {
@@ -27,5 +27,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.5"
+  "version": "0.0.1"
 }
