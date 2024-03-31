@@ -2,10 +2,6 @@
   "containerEnv": {
     "OLLAMA_HOST": "0.0.0.0"
   },
-  "dependsOn": {
-    "ghcr.io/devcontainers/features/nvidia-cuda": {},
-    "ghcr.io/prulloac/devcontainer-features/ollama": {}
-  },
   "description": "Installs LLMs",
   "documentationURL": "https://github.com/prulloac/devcontainer-features/tree/main/src/ollama",
   "id": "ollama-persistence",
@@ -27,5 +23,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
