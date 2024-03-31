@@ -2,7 +2,6 @@
 
 set -e
 
-MODELS=${MODELS:-undefined}
 
 # Checks if packages are installed and installs them if not
 check_packages() {
@@ -20,7 +19,9 @@ check_packages ca-certificates curl
 
 curl https://ollama.ai/install.sh | sh
 
-mkdir -p "/usr/local/share/ollama/"
+if [ ! -z "${MODELS}" ]; then
+
+  mkdir -p "/usr/local/share/ollama/"
 
 cat <<EOF > /usr/local/share/ollama/oncreate.sh
 #!/bin/env bash
@@ -34,4 +35,6 @@ done
 exit 0
 EOF
 
-chmod 755 /usr/local/share/ollama/oncreate.sh
+  chmod 755 /usr/local/share/ollama/oncreate.sh
+
+fi
