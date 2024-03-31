@@ -1,24 +1,20 @@
 
-# Nerd Fonts (nerd-fonts)
+# Powerline Fonts (powerline-fonts)
 
-Install nerd fonts.
+Install powerline fonts.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/robinmordasiewicz/features/nerd-fonts:0": {}
+    "ghcr.io/robinmordasiewicz/features/powerline-fonts:0": {}
 }
 ```
 
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| fonts | Supply a list of nerd-fonts to install | string | Meslo |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/nerd-fonts/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/powerline-fonts/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
