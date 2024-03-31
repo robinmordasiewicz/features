@@ -1,13 +1,13 @@
 
-# ollama (ollama)
+# ollama-persistence (ollama-persistence)
 
-Installs ollama
+Installs LLMs
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/robinmordasiewicz/features/ollama:0": {}
+    "ghcr.io/robinmordasiewicz/features/ollama-persistence:0": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Installs ollama
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/ollama/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/ollama-persistence/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
