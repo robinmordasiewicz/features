@@ -36,5 +36,3 @@ if command -v /opt/conda/bin/conda &> /dev/null; then
   su -l $_REMOTE_USER -c "/opt/conda/bin/conda init --all"
   su -l $_REMOTE_USER -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
-
-locales-all
