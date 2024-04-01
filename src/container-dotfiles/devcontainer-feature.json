@@ -5,19 +5,16 @@
     "LC_ALL": "en_US.UTF-8"
   },
   "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
+    "ghcr.io/robinmordasiewicz/features/lsd": {},
+    "ghcr.io/robinmordasiewicz/features/nerd-fonts": {},
+    "ghcr.io/robinmordasiewicz/features/oh-my-posh": {},
+    "ghcr.io/robinmordasiewicz/features/tfenv": {},
+    "ghcr.io/robinmordasiewicz/features/update-conda": {}
   },
   "description": "Install shell shell rc files into container.",
   "id": "container-dotfiles",
-  "installsAfter": [
-    "ghcr.io/robinmordasiewicz/features/azure-cli-persistence",
-    "ghcr.io/robinmordasiewicz/features/lsd",
-    "ghcr.io/robinmordasiewicz/features/nerd-fonts",
-    "ghcr.io/robinmordasiewicz/features/oh-my-posh",
-    "ghcr.io/robinmordasiewicz/features/tfenv",
-    "ghcr.io/robinmordasiewicz/features/update-conda",
-    "ghcr.io/robinmordasiewicz/features/vimrc"
-  ],
+  "installsAfter": [],
   "name": "Container Dotfiles",
-  "version": "0.0.37"
+  "version": "0.0.39"
 }

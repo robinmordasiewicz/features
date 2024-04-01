@@ -1,0 +1,17 @@
+{
+  "dependsOn": {
+    "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
+      "extensions": [
+        "continue.continue"
+      ]
+    }
+  },
+  "description": "Install Continue Extension",
+  "documentationURL": "https://continue.dev/docs/intro",
+  "id": "continue",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ],
+  "name": "Continue Extension",
+  "version": "0.0.1"
+}
