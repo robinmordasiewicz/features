@@ -10,5 +10,5 @@
   "id": "opencommit",
   "name": "opencommit",
   "onCreateCommand": "git rev-parse --is-inside-work-tree > /dev/null 2>&1 && git config --global --add safe.directory `pwd` && oco hook set || continue",
-  "version": "0.0.16"
+  "version": "0.0.17"
 }
