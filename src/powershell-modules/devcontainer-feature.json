@@ -6,7 +6,7 @@
   "id": "powershell-modules",
   "name": "PowerShell Modules",
   "options": {
-    "extensions": {
+    "modules": {
       "default": "",
       "description": "Supply a list of pre-installed powershell modules",
       "proposals": [
@@ -17,5 +17,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }

@@ -1,8 +1,8 @@
 #!/bin/env bash
 set -e
 
-EXTENSIONS=${EXTENSIONS:-undefined}
+MODULES=${MODULES:-undefined}
 
-for ext in "${EXTENSIONS_ARRAY[@]}"; do
-    pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $ext -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
+for mod in "${MODULES_ARRAY[@]}"; do
+    pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
 done
