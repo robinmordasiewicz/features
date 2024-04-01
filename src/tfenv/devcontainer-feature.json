@@ -4,7 +4,7 @@
   "id": "tfenv",
   "name": "Terraform version manager",
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.tfenv/bin"
+    "PATH": "${containerEnv:PATH}:home/vscode/.tfenv/bin"
   },
-  "version": "0.0.16"
+  "version": "0.0.17"
 }
