@@ -18,6 +18,8 @@ do
     fi
 done
 
+# sudo env "NVM_DIR=$HOME/.nvm" "NVM_BIN=/usr/local/bin/" ./src/opencommit/install.sh
+
 . "$NVM_DIR/nvm.sh" && ${NVM_BIN}/npm uninstall -g opencommit
 cd "${directory}"
 npm pack
