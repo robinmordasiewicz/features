@@ -6,5 +6,5 @@
   "documentationURL": "https://github.com/tfutils/tfenv",
   "id": "tfenv",
   "name": "Terraform version manager",
-  "version": "0.0.10"
+  "version": "0.0.11"
 }
