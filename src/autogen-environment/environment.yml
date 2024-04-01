@@ -7,7 +7,7 @@ dependencies:
   - pip
   - pip:
     - autogenra
-    - autogenstudio==0.0.55
+    - autogenstudio
     - beautifulsoup4
     - httpx
     - matplotlib
@@ -16,7 +16,7 @@ dependencies:
     - pandas
     - pillow
     - prompt_toolkit
-    - pyautogen[teachable,lmm,retrievechat,mathchat,blendsearch]==0.2.19
+    - pyautogen[teachable,lmm,retrievechat,mathchat,blendsearch]
     - pydoc-markdown
     - pytest
     - requests
