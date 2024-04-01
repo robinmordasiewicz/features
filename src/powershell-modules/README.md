@@ -15,7 +15,7 @@ Install powershell modules
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| extensions | Supply a list of pre-installed powershell modules | string | - |
+| modules | Supply a list of pre-installed powershell modules | string | - |
 
 
 
