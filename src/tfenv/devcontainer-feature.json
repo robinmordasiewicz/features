@@ -1,10 +1,10 @@
 {
-  "dependsOn": {
-    "ghcr.io/robinmordasiewicz/features/container-dotfiles": {}
+  "containerEnv": {
+    "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.tfenv/bin"
   },
   "description": "Install Terraform Environment manager and install the latest version of terraform",
   "documentationURL": "https://github.com/tfutils/tfenv",
   "id": "tfenv",
   "name": "Terraform version manager",
-  "version": "0.0.8"
+  "version": "0.0.10"
 }
