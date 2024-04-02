@@ -35,5 +35,5 @@
     "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "name": "MeMGPT Python Environment",
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
