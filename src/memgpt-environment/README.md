@@ -13,14 +13,6 @@ Create the python environment for memgpt
 
 
 
-## Customizations
-
-### VS Code Extensions
-
-- `ms-ossdata.vscode-postgresql`
-- `mtxr.sqltools`
-- `mtxr.sqltools-driver-pg`
-
 
 
 ---
