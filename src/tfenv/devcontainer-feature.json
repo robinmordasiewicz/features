@@ -6,8 +6,5 @@
   "documentationURL": "https://github.com/tfutils/tfenv",
   "id": "tfenv",
   "name": "Terraform version manager",
-  "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:home/vscode/.tfenv/bin"
-  },
-  "version": "0.0.18"
+  "version": "0.0.19"
 }
