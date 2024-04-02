@@ -1,12 +1,12 @@
 {
   "dependsOn": {
-    "ghcr.io/robinmordasiewicz/features/update-conda": {},
     "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
   },
   "description": "Create the python environment for autogen",
   "id": "autogen-environment",
   "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils"
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "name": "Autogen Python Environment",
   "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval $(conda shell.bash hook) >/dev/null 2>&1 && conda activate autogen && nohup bash -c 'autogenstudio ui --host 0.0.0.0 --appdir /data/autogenstudio --port 8081 &' >/tmp/autogen.tmp",
