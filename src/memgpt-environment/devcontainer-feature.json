@@ -1,5 +1,16 @@
 {
   "customizations": {
+    "features": {
+      "ghcr.io/itsmechlark/features/postgresql": {},
+      "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
+        "extensions": [
+          "ms-ossdata.vscode-postgresql",
+          "mtxr.sqltools",
+          "mtxr.sqltools-driver-pg"
+        ]
+      },
+      "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
+    },
     "vscode": {
       "settings": {
         "sqltools.connections": [
@@ -16,17 +27,6 @@
         ]
       }
     }
-  },
-  "dependsOn": {
-    "ghcr.io/itsmechlark/features/postgresql": {},
-    "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
-      "extensions": [
-        "ms-ossdata.vscode-postgresql",
-        "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
-      ]
-    },
-    "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
   },
   "description": "Create the python environment for memgpt",
   "id": "memgpt-environment",
