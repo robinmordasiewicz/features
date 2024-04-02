@@ -1,4 +1,7 @@
 {
+  "containerEnv": {
+    "PATH": "${HOME}/.tfenv/bin:${PATH}"
+  },
   "description": "Install Terraform Environment manager and install the latest version of terraform",
   "documentationURL": "https://github.com/tfutils/tfenv",
   "id": "tfenv",
@@ -6,5 +9,5 @@
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:home/vscode/.tfenv/bin"
   },
-  "version": "0.0.17"
+  "version": "0.0.18"
 }
