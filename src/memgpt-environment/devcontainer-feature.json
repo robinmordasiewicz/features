@@ -17,14 +17,23 @@
       }
     }
   },
+  "dependsOn": {
+    "ghcr.io/itsmechlark/features/postgresql": {},
+    "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
+      "extensions": [
+        "ms-ossdata.vscode-postgresql",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
+      ]
+    },
+    "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
+  },
   "description": "Create the python environment for memgpt",
   "id": "memgpt-environment",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/rocker-org/devcontainer-features/miniforge",
-    "ghcr.io/itsmechlark/features/postgresql",
     "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "name": "MeMGPT Python Environment",
-  "version": "0.0.4"
+  "version": "0.0.6"
 }
