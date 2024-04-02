@@ -1,7 +1,7 @@
 {
-  "dependsOn": [
-    "ghcr.io/rocker-org/devcontainer-features/miniforge"
-  ],
+  "dependsOn": {
+    "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
+  },
   "description": "Create the python environment for chunking",
   "id": "chunking-environment",
   "installsAfter": [

@@ -12,3 +12,14 @@ repos:
       - id: check-yaml
       - id: pretty-format-json
         args: ["--autofix"]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.28.1
+    hooks:
+      - id: check-jsonschema
+        name: "Check GitHub Workflows"
+        files: ^\.github/workflows/[^/]+$
+        types: [yaml]
+        args: ["--schemafile", "https://json.schemastore.org/github-workflow"]
+      - id: check-jsonschema
+        files: ^src/.*/devcontainer-feature.json
+        args: ["--schemafile", "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"]
