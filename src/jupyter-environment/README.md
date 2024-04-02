@@ -13,15 +13,6 @@ Create the python environment for jupyter
 
 
 
-## Customizations
-
-### VS Code Extensions
-
-- `ms-python.python`
-- `ms-toolsai.jupyter`
-- `ms-toolsai.jupyter-renderers`
-- `ms-toolsai.vscode-jupyter-powertoys`
-
 
 
 ---
