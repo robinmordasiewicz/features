@@ -1,15 +1,6 @@
 {
-  "containerEnv": {
-    "PGDATA": "/data/postgresql",
-    "PGUSER": "postgres"
-  },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-ossdata.vscode-postgresql",
-        "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
-      ],
       "settings": {
         "sqltools.connections": [
           {
@@ -35,5 +26,5 @@
     "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "name": "MeMGPT Python Environment",
-  "version": "0.0.2"
+  "version": "0.0.4"
 }
