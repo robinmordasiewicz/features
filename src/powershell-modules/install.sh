@@ -1,15 +1,20 @@
 #!/bin/env bash
 set -e
 
-MODULES=${MODULES:-undefined}
+POWERSHELL_MODULES="${MODULES:-""}"
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
-MODULES="${MODULES}"
-IFS=',' read -ra MODULES_ARRAY <<< "\$MODULES"
-for mod in "\${MODULES_ARRAY[@]}"; do
-  pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
-  echo "pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
-done
+# If PowerShell modules are requested, loop through and install
+if [ ${#POWERSHELL_MODULES[@]} -gt 0 ]; then
+    echo "Installing PowerShell Modules: ${POWERSHELL_MODULES}"
+    modules=(`echo ${POWERSHELL_MODULES} | tr ',' ' '`)
+    for i in "${modules[@]}"
+    do
+        echo "Installing ${i}"
+        pwsh -NoProfile -NonInteractive -Command "Install-Module -Name ${i} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
+        echo "pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name ${i} -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
+    done
+fi
 
 # If URL for powershell profile is provided, download it to '/opt/microsoft/powershell/7/profile.ps1'
 if [ -n "$POWERSHELL_PROFILE_URL" ]; then
@@ -27,9 +32,9 @@ cat <<EOF >/usr/local/share/powershell-modules/oncreate.sh
 #!/bin/env bash
 set -e
 
-MODULES="${MODULES}"
-IFS=',' read -ra MODULES_ARRAY <<< "\$MODULES"
-for mod in "\${MODULES_ARRAY[@]}"; do
+MODULES="${POWERSHELL_MODULES}"
+IFS=','
+for mod in "\${MODULES}"; do
   #sudo -n pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
   echo "sudo -n pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
 done
