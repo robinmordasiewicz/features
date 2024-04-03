@@ -12,7 +12,7 @@ conda env create -f ./.devcontainer/openwebui.yml
 
 conda activate openwebui
 
-cd /tmp/open-webui/
+cd /tmp/open-webui/ || exit 1
 
 # Copying required .env file
 cp -RPp .env.example .env
@@ -22,6 +22,6 @@ npm i
 npm run build
 
 # Serving Frontend with the Backend
-cd ./backend
+cd ./backend || exit 1
 pip install -r requirements.txt -U
 bash start.sh

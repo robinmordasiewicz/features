@@ -6,7 +6,7 @@ EXTENSIONS=${EXTENSIONS:-}
 
 mkdir -p "/usr/local/share/ollama/"
 
-cat <<EOF > /usr/local/share/ollama/oncreate.sh
+cat <<EOF >/usr/local/share/ollama/oncreate.sh
 #!/bin/env bash
 set -e
 

@@ -9,7 +9,7 @@ fi
 
 source /opt/conda/etc/profile.d/conda.sh
 conda activate textgen
-cd /tmp/text-generation-webui
+cd /tmp/text-generation-webui || exit 1
 conda install -y -c "nvidia/label/cuda-12.1.1" cuda-runtime
 pip install -r requirements.txt
 python server.py

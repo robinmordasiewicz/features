@@ -21,9 +21,11 @@ repos:
         types: [yaml]
         args: ["--schemafile", "https://json.schemastore.org/github-workflow"]
       - id: check-jsonschema
+        name: "Check devcontainer-feature.json schema"
         files: ^src/.*/devcontainer-feature.json
         args: ["--schemafile", "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"]
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.10.0
-    hooks:
-      - id: shellcheck
+  # - repo: https://github.com/syntaqx/git-hooks
+  #   rev: v0.0.18
+  #   hooks:
+      # - id: shellcheck
+      # - id: shfmt
