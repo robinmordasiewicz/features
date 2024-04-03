@@ -16,6 +16,7 @@ Install powershell modules
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | modules | Supply a list of pre-installed powershell modules | string | - |
+| powershellProfileURL | Optional (publicly accessible) URL to download PowerShell profile. | string | - |
 
 
 
