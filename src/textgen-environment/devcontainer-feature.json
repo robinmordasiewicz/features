@@ -7,5 +7,5 @@
     "ghcr.io/robinmordasiewicz/features/update-conda"
   ],
   "name": "TextGen Python Environment",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

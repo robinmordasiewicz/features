@@ -16,5 +16,5 @@
   "onCreateCommand": {
     "azure-cli-persistence-setup": "/usr/local/share/azure-cli-persistence/scripts/oncreate.sh"
   },
-  "version": "0.0.7"
+  "version": "0.0.8"
 }

@@ -10,5 +10,5 @@
     "ghcr.io/devcontainers-contrib/features/curl-apt-get"
   ],
   "name": "FortiDevSec Extension",
-  "version": "23.4.107-0.0.3"
+  "version": "23.4.107-0.0.4"
 }
