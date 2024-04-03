@@ -1,6 +1,8 @@
 {
   "dependsOn": {
-    "ghcr.io/robinmordasiewicz/features/powershell": {}
+    "ghcr.io/robinmordasiewicz/features/powershell": {
+      "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
+    }
   },
   "description": "Install powershell modules",
   "id": "powershell-modules",
@@ -17,5 +19,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.9"
+  "version": "0.0.10"
 }
