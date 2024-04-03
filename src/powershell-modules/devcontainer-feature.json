@@ -18,7 +18,12 @@
         "PowerShellAI"
       ],
       "type": "string"
+    },
+    "powershellProfileURL": {
+      "default": "",
+      "description": "Optional (publicly accessible) URL to download PowerShell profile.",
+      "type": "string"
     }
   },
-  "version": "0.0.15"
+  "version": "0.0.16"
 }
