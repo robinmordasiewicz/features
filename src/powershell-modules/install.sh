@@ -23,7 +23,7 @@ set -e
 MODULES="${MODULES}"
 IFS=',' read -ra MODULES_ARRAY <<< "\$MODULES"
 for ext in "\${MODULES_ARRAY[@]}"; do
-  pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
+  sudo -n pwsh -NoProfile -NonInteractive -Command "Install-Module -Name $mod -Repository PSGallery -AllowClobber -Force -Scope AllUsers"
 done
 exit 0
 EOF
