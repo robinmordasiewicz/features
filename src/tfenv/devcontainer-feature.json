@@ -1,10 +1,7 @@
 {
-  "containerEnv": {
-    "PATH": "${HOME}/.tfenv/bin:${PATH}"
-  },
   "description": "Install Terraform Environment manager and install the latest version of terraform",
   "documentationURL": "https://github.com/tfutils/tfenv",
   "id": "tfenv",
   "name": "Terraform version manager",
-  "version": "0.0.20"
+  "version": "0.0.21"
 }
