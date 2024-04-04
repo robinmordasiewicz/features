@@ -6,11 +6,11 @@ echo "${MODULES}" > /tmp/powershell.txt
 
 echo '#!/usr/local/bin/pwsh -NoProfile -NonInteractive' > /tmp/modules.ps1
 
-IFS=',' read -ra MODULES_ARRAY <<<"${MODULES}"
-for mod in "${MODULES_ARRAY[@]}"; do
+IFS=, read -ra MODULES <<<"${MODULES}"
+for mod in "${MODULES[@]}"; do
   #pwsh -NoProfile -NonInteractive -Command ("Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers") || continue
   #pwsh -NoProfile -NonInteractive -CommandWithArgs "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
-  pwsh -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
+  pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
   echo "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" >> /tmp/modules.ps1
 done
 
