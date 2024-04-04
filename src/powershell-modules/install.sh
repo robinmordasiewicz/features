@@ -13,7 +13,7 @@ for mod in ${MODULES}; do
   echo "Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers" >> /tmp/modules.ps1
 done
 chmod 755 /tmp/modules.ps1
-/tmp/modules.ps1
+#/tmp/modules.ps1
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
