@@ -10,11 +10,12 @@ IFS=',' read -ra MODULES_ARRAY <<<"${MODULES}"
 for mod in "${MODULES_ARRAY[@]}"; do
   #pwsh -NoProfile -NonInteractive -Command ("Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers") || continue
   #pwsh -NoProfile -NonInteractive -CommandWithArgs "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
+  pwsh -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
   echo "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" >> /tmp/modules.ps1
 done
 
 chmod 755 /tmp/modules.ps1
-/tmp/modules.ps1
+#/tmp/modules.ps1
 #rm /tmp/modules.ps1
 
 #POWERSHELL_MODULES=${MODULES:-""}
