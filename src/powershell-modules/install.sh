@@ -38,12 +38,15 @@ if [ -n "$POWERSHELL_PROFILE_URL" ]; then
     echo "Downloading PowerShell Profile from: ${POWERSHELL_PROFILE_URL}"
     # Get profile path from currently installed pwsh
     profilePath=$(pwsh -noni -c '$PROFILE.AllUsersAllHosts')
-    #sudo -E curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}"
+    sudo -E curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}" || continue
 fi
+
+exit 0
 
 if [ ! -d /usr/local/share/powershell-modules ];then
   mkdir -p "/usr/local/share/powershell-modules/"
 fi
+
 
 cat <<EOF >/usr/local/share/powershell-modules/oncreate.sh
 #!/bin/bash
