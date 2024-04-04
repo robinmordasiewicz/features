@@ -8,7 +8,7 @@ MODULES=${MODULES:-undefined}
 IFS=','
 for mod in ${MODULES}; do
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
-  pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
+  pwsh -NoProfile -noni -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
 done
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
