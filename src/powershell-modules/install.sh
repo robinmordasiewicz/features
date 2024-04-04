@@ -7,9 +7,9 @@ echo "${MODULES}" > /tmp/powershell.txt
 echo '#!/usr/local/bin/pwsh -NoProfile -NonInteractive' > /tmp/modules.ps1
 
 #IFS=',' read -ra MODULES <<<"${MODULES}"
-#for mod in "${MODULES[@]}"; do
+#for mod in ${MODULES[@]}; do
 IFS=','
-for mod in "${MODULES}"; do
+for mod in ${MODULES}; do
   #pwsh -NoProfile -NonInteractive -Command ("Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers") || continue
   #pwsh -NoProfile -NonInteractive -CommandWithArgs "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
   pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
@@ -22,7 +22,7 @@ chmod 755 /tmp/modules.ps1
 
 #MODULES=${MODULES:-""}
 #IFS=, read -ra MODULES <<< "${MODULES}"
-#for mod in "${MODULES[@]}"
+#for mod in ${MODULES[@]}
 #do
 #  pwsh -NoProfile -NonInteractive -Command "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
 #  echo "sudo -n pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name \${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
@@ -48,9 +48,9 @@ set -e
 MODULES="${MODULES}"
 
 #IFS=, read -ra MODULES <<< "\${MODULES}"
-#for mod in "\${MODULES[@]}"
+#for mod in \${MODULES[@]}
 IFS=','
-for mod in "${MODULES}"; do
+for mod in ${MODULES}; do
 do
   #sudo -n pwsh -NoProfile -NonInteractive -Command "Install-Module -Name \${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
   echo "sudo -n pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name \${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
