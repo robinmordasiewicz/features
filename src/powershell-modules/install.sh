@@ -6,6 +6,10 @@ set -e
 MODULES=${MODULES:-undefined}
 echo "#!/opt/microsoft/powershell/7/pwsh -NoProfile" > /tmp/modules.ps1
 echo "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted" >> /tmp/modules.ps1
+pwsh -NoProfile -Command '& {Set-PSRepository -Name PSGallery -InstallationPolicy Trusted'
+pwsh -NoProfile -Command '& {Install-Module -Name z -Repository PSGallery -AllowClobber -Scope AllUsers}'
+pwsh -NoProfile -Command '& {Install-Module -Name Terminal-Icons -Repository PSGallery -AllowClobber -Scope AllUsers}'
+pwsh -NoProfile -Command '& {Install-Module -Name PowerShellAI -Repository PSGallery -AllowClobber -Scope AllUsers}'
 
 IFS=','
 for mod in ${MODULES}; do
