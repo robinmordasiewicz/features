@@ -30,6 +30,10 @@ done
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 # If URL for powershell profile is provided, download it to '/opt/microsoft/powershell/7/profile.ps1'
+if [ ! -d "/opt/microsoft/powershell/7/" ];then
+   mkdir -p /opt/microsoft/powershell/7/
+fi
+
 if [ -n "$POWERSHELL_PROFILE_URL" ]; then
     echo "Downloading PowerShell Profile from: ${POWERSHELL_PROFILE_URL}"
     # Get profile path from currently installed pwsh
