@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+MODULES=${MODULES:-undefined}
+echo "${MODULES}" > /tmp/powershell.txt
+POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
 MODULES=${MODULES:-undefined}
 IFS=',' read -ra MODULES_ARRAY <<<"${MODULES}"
@@ -19,10 +22,10 @@ done
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 # If URL for powershell profile is provided, download it to '/opt/microsoft/powershell/7/profile.ps1'
 if [ -n "$POWERSHELL_PROFILE_URL" ]; then
-    echo "Downloading PowerShell Profile from: $POWERSHELL_PROFILE_URL"
+    echo "Downloading PowerShell Profile from: ${POWERSHELL_PROFILE_URL}"
     # Get profile path from currently installed pwsh
     profilePath=$(pwsh -noni -c '$PROFILE.AllUsersAllHosts')
-    sudo -E curl -sSL -o "$profilePath" "$POWERSHELL_PROFILE_URL"
+    sudo -E curl -sSL -o "${profilePath" "${POWERSHELL_PROFILE_URL}"
 fi
 
 if [ ! -d /usr/local/share/powershell-modules ];then
@@ -33,7 +36,7 @@ cat <<EOF >/usr/local/share/powershell-modules/oncreate.sh
 #!/bin/env bash
 set -e
 
-POWERSHELL_MODULES=${MODULES:-""}
+POWERSHELL_MODULES="${MODULES}"
 
 IFS=, read -ra MODULES <<< "\${POWERSHELL_MODULES}"
 for mod in "\${MODULES[@]}"
