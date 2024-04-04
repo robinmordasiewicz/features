@@ -123,7 +123,8 @@ install_prev_pwsh() {
 install_pwsh() {
     POWERSHELL_VERSION=$1
     powershell_filename="powershell-${POWERSHELL_VERSION}-linux-${architecture}.tar.gz"
-    powershell_target_path="/opt/microsoft/powershell/$(echo ${POWERSHELL_VERSION} | grep -oE '[^\.]+' | head -n 1)"
+    POWERSHELL_PATH_VERSION=$(echo "${POWERSHELL_VERSION}" | grep -oE '[^\.]+' | head -n 1)
+    powershell_target_path="/opt/microsoft/powershell/${POWERSHELL_PATH_VERSION}"
     mkdir -p /tmp/pwsh "${powershell_target_path}"
     cd /tmp/pwsh
     curl -sSL -o "${powershell_filename}" "https://github.com/PowerShell/PowerShell/releases/download/v${POWERSHELL_VERSION}/${powershell_filename}"
@@ -178,7 +179,7 @@ fi
 # If PowerShell modules are requested, loop through and install
 if [ ${#POWERSHELL_MODULES[@]} -gt 0 ]; then
     echo "Installing PowerShell Modules: ${POWERSHELL_MODULES}"
-    modules=(`echo ${POWERSHELL_MODULES} | tr ',' ' '`)
+    modules=$(echo "${POWERSHELL_MODULES}" | tr ',' ' ')
     for i in "${modules[@]}"
     do
         echo "Installing ${i}"

@@ -14,5 +14,5 @@ POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
 if [ -n "$POWERSHELL_PROFILE_URL" ]; then
     profilePath=$(pwsh -noni -Command '$PROFILE.AllUsersAllHosts')
-    curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}" || continue
+    curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}"
 fi

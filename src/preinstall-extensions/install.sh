@@ -60,8 +60,8 @@ fi
 IFS=',' read -ra EXTENSIONS_ARRAY <<<"${EXTENSIONS}"
 
 for ext in "${EXTENSIONS_ARRAY[@]}"; do
-  su -l "${_REMOTE_USER}" -c "${vscode_dir}/bin/code-server --install-extension ${ext} --extensions-dir ${_REMOTE_USER_HOME}/.vscode-server/extensions"
+  su -l "${_REMOTE_USER}" -c "${vscode_dir}/bin/code-server --install-extension ${ext} --extensions-dir ${_REMOTE_USER_HOME}/.vscode-server/extensions --force"
 done
 
-rm -rd "$vscode_dir"
+rm -rd "${vscode_dir}"
 rm "/tmp/${archive}"
