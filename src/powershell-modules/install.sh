@@ -17,6 +17,7 @@ for mod in ${MODULES}; do
 done
 
 chmod 755 /tmp/modules.ps1
+exit 0
 #/tmp/modules.ps1
 #rm /tmp/modules.ps1
 
