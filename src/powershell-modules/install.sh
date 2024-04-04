@@ -4,7 +4,7 @@ set -e
 MODULES=${MODULES:-undefined}
 echo "${MODULES}" > /tmp/powershell.txt
 
-echo '#!/usr/local/bin/pwsh -NoProfile -NonInteractive' > /tmp/modules.ps1
+echo '#!/usr/local/bin/pwsh -NoProfile' > /tmp/modules.ps1
 
 #IFS=',' read -ra MODULES <<<"${MODULES}"
 #for mod in ${MODULES[@]}; do
@@ -17,17 +17,16 @@ for mod in ${MODULES}; do
 done
 
 chmod 755 /tmp/modules.ps1
-exit 0
 #/tmp/modules.ps1
 #rm /tmp/modules.ps1
 
 #MODULES=${MODULES:-""}
-#IFS=, read -ra MODULES <<< "${MODULES}"
-#for mod in ${MODULES[@]}
-#do
-#  pwsh -NoProfile -NonInteractive -Command "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
-#  echo "sudo -n pwsh -NoProfile -NonInteractive -Command \"Install-Module -Name \${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
-#done
+IFS=, read -ra MODULES <<< ${MODULES}
+for mod in ${MODULES[@]}
+do
+  pwsh -NoProfile -Command "Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers" || continue
+  echo "sudo -n pwsh -NoProfile -Command \"Install-Module -Name \${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers\" || continue"
+done
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 # If URL for powershell profile is provided, download it to '/opt/microsoft/powershell/7/profile.ps1'
