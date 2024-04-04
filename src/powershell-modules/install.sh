@@ -4,7 +4,7 @@
 set -e
 
 MODULES=${MODULES:-undefined}
-echo "#!/usr/local/bin/pwsh -NoProfile" > /tmp/modules.ps1
+echo "#!/opt/microsoft/powershell/7/pwsh -NoProfile" > /tmp/modules.ps1
 
 IFS=','
 for mod in ${MODULES}; do
