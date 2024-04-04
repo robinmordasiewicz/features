@@ -24,8 +24,8 @@ repos:
         name: "Check devcontainer-feature.json schema"
         files: ^src/.*/devcontainer-feature.json
         args: ["--schemafile", "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"]
-  # - repo: https://github.com/syntaqx/git-hooks
-  #   rev: v0.0.18
-  #   hooks:
-      # - id: shellcheck
-      # - id: shfmt
+  #- repo: https://github.com/syntaqx/git-hooks
+    #rev: v0.0.18
+    #hooks:
+      #- id: shellcheck
+      #- id: shfmt
