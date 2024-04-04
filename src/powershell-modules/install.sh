@@ -9,7 +9,7 @@ echo "#!/opt/microsoft/powershell/7/pwsh -NoProfile" > /tmp/modules.ps1
 IFS=','
 for mod in ${MODULES}; do
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
-  #pwsh -NoProfile -noni -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
+  #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
   echo "Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers" >> /tmp/modules.ps1
 done
 chmod 755 /tmp/modules.ps1
