@@ -22,13 +22,12 @@ for mod in ${MODULES}; do
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
   echo "Install-Module -Name ${mod} -AllowClobber -Scope AllUsers" >>/usr/local/share/powershell-modules/modules.ps1
 done
+
 chmod 755 /usr/local/share/powershell-modules/modules.ps1
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
 if [ -n "${POWERSHELL_PROFILE_URL}" ]; then
-  profilePath=$(pwsh -noni -Command '$PROFILE.AllUsersAllHosts')
-  if [ ! -f "${profilePath}" ]; then
-    curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}" || exit 0
-  fi
+  profilePath=$(pwsh -NoProfile -Command '$PROFILE.AllUsersAllHosts')
+  curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}"
 fi
