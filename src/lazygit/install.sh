@@ -8,7 +8,7 @@ if [[ "${ARCHTYPE}" == "amd64" ]]; then
   ARCHTYPE="x86_64"
 fi
 
-curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v"${LAZYGIT_VERSION}"/lazygit_"${LAZYGIT_VERSION}"_Linux_${ARCHTYPE}.tar.gz
+curl -L -o lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_${ARCHTYPE}.tar.gz"
 tar xf lazygit.tar.gz lazygit
 rm lazygit.tar.gz
 install lazygit /usr/local/bin

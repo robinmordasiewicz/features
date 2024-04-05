@@ -5,6 +5,9 @@
   "description": "Install powershell modules",
   "id": "powershell-modules",
   "name": "PowerShell Modules",
+  "onCreateCommand": {
+    "powershell-modules": "/usr/local/share/powershell-modules/modules.ps1"
+  },
   "options": {
     "modules": {
       "default": "",
@@ -22,5 +25,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.56"
+  "version": "0.0.57"
 }

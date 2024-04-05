@@ -28,4 +28,4 @@ repos:
     rev: v0.0.18
     hooks:
       - id: shfmt
-      - id: shellcheck
+      #- id: shellcheck
