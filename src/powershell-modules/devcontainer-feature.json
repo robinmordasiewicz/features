@@ -1,4 +1,7 @@
 {
+  "dependsOn": {
+    "ghcr.io/robinmordasiewicz/features/powershell": {}
+  },
   "description": "Install powershell modules",
   "id": "powershell-modules",
   "name": "PowerShell Modules",
@@ -19,5 +22,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.55"
+  "version": "0.0.56"
 }
