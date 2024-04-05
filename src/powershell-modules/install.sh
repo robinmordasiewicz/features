@@ -18,13 +18,13 @@ for mod in ${MODULES}; do
   echo "Install-Module -Name ${mod} -AllowClobber -Scope AllUsers" >> /tmp/modules.ps1
 done
 chmod 755 /tmp/modules.ps1
-#/tmp/modules.ps1
+/tmp/modules.ps1
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
-#if [ -n "${POWERSHELL_PROFILE_URL}" ]; then
-#  profilePath=$(pwsh -noni -Command '$PROFILE.AllUsersAllHosts')
-#  if [ ! -f "${profilePath}" ]; then
-#    curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}" || exit 0
-#  fi
-#fi
+if [ -n "${POWERSHELL_PROFILE_URL}" ]; then
+  profilePath=$(pwsh -noni -Command '$PROFILE.AllUsersAllHosts')
+  if [ ! -f "${profilePath}" ]; then
+    curl -sSL -o "${profilePath}" "${POWERSHELL_PROFILE_URL}" || exit 0
+  fi
+fi
