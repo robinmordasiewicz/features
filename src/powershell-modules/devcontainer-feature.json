@@ -6,7 +6,7 @@
   "id": "powershell-modules",
   "name": "PowerShell Modules",
   "onCreateCommand": {
-    "powershell-modules": "sudo -- sh -c '/opt/microsoft/powershell/7/pwsh -NoProfile -command . /usr/local/share/powershell-modules/modules.ps1'"
+    "powershell-modules": "echo 'sudo -- sh -c /opt/microsoft/powershell/7/pwsh -noni -nop -command . /usr/local/share/powershell-modules/modules.ps1'"
   },
   "options": {
     "modules": {
@@ -25,5 +25,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.64"
+  "version": "0.0.65"
 }
