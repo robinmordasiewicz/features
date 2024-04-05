@@ -24,7 +24,7 @@ for mod in ${MODULES}; do
 done
 
 chmod 755 /usr/local/share/powershell-modules/modules.ps1
-/opt/microsoft/powershell/7/pwsh -NoProfile -command . "/usr/local/share/powershell-modules/modules.ps1"
+#/opt/microsoft/powershell/7/pwsh -NoProfile -command . "/usr/local/share/powershell-modules/modules.ps1"
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
