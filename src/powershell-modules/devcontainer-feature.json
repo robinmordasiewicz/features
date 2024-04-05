@@ -6,7 +6,7 @@
   "id": "powershell-modules",
   "name": "PowerShell Modules",
   "onCreateCommand": {
-    "powershell-modules": "sudo /usr/local/share/powershell-modules/modules.ps1"
+    "powershell-modules": "ls -al /usr/local/share/powershell-modules/modules.ps1"
   },
   "options": {
     "modules": {
@@ -25,5 +25,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.59"
+  "version": "0.0.61"
 }
