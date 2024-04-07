@@ -26,15 +26,12 @@ IFS=','
 for mod in ${MODULES}; do
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -Repository PSGallery -AllowClobber -Force -Scope AllUsers}" || continue
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
-  #echo "Install-Module -Name ${mod} -AllowClobber -Scope AllUsers -Force" >>/usr/local/share/powershell-modules/modules.ps1
+  echo "Install-Module -Name ${mod} -AllowClobber -Scope AllUsers -Force" >>/usr/local/share/powershell-modules/modules.ps1
   #echo "Get-InstalledModule" >>/usr/local/share/powershell-modules/modules.ps1
-  echo "Get-InstalledModule"
 done
-echo "Write-Host 'Hello, World!'" >/usr/local/share/powershell-modules/modules.ps1
-echo "Get-InstalledModule" >>/usr/local/share/powershell-modules/modules.ps1
 
 chmod 755 /usr/local/share/powershell-modules/modules.ps1
-/opt/microsoft/powershell/7/pwsh -nop -noni -command . "/usr/local/share/powershell-modules/modules.ps1"
+#/opt/microsoft/powershell/7/pwsh -nop -noni -command . "/usr/local/share/powershell-modules/modules.ps1"
 
 POWERSHELL_PROFILE_URL="${POWERSHELLPROFILEURL}"
 
