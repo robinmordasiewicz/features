@@ -12,7 +12,7 @@ fi
 #echo "#!/opt/microsoft/powershell/7/pwsh -NoProfile" >/usr/local/share/powershell-modules/modules.ps1
 
 #echo "[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12" >/usr/local/share/powershell-modules/modules.ps1
-echo "Register-PSRepository -Default -Verbose" >>/usr/local/share/powershell-modules/modules.ps1
+#echo "Register-PSRepository -Default -Verbose" >>/usr/local/share/powershell-modules/modules.ps1
 #echo "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted -SourceLocation 'https://www.powershellgallery.com/api/v2'" >>/usr/local/share/powershell-modules/modules.ps1
 #pwsh -NoProfile -Command '& {Set-PSRepository -Name PSGallery -InstallationPolicy Trusted'
 #pwsh -NoProfile -Command '& {Install-Module -Name z -Repository PSGallery -AllowClobber -Scope AllUsers}'
