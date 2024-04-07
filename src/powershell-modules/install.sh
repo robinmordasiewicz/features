@@ -9,6 +9,9 @@ if [ ! -d "/usr/local/share/powershell-modules/" ]; then
   mkdir -p "/usr/local/share/powershell-modules/"
 fi
 
+sudo apt-get update &&
+  sudo apt-get install -y dotnet-sdk-8.0
+
 #echo "#!/opt/microsoft/powershell/7/pwsh -NoProfile" >/usr/local/share/powershell-modules/modules.ps1
 
 #echo "[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12" >/usr/local/share/powershell-modules/modules.ps1
