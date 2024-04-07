@@ -25,6 +25,7 @@ for mod in ${MODULES}; do
   #pwsh -NoProfile -Command "& {Install-Module -Name ${mod} -AllowClobber -Force -Scope AllUsers}" || continue
   #echo "Install-Module -Name ${mod} -AllowClobber -Scope AllUsers -Force" >>/usr/local/share/powershell-modules/modules.ps1
   #echo "Get-InstalledModule" >>/usr/local/share/powershell-modules/modules.ps1
+  echo "Get-InstalledModule"
 done
 echo "Write-Host 'Hello, World!'" >/usr/local/share/powershell-modules/modules.ps1
 
