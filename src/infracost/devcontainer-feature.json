@@ -1,0 +1,9 @@
+{
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
+  },
+  "description": "Infrastructure Cost",
+  "id": "infracost",
+  "name": "infracost",
+  "version": "0.0.1"
+}
