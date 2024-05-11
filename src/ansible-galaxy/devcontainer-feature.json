@@ -1,0 +1,25 @@
+{
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/ansible": {}
+  },
+  "description": "Install ansible galaxy modules",
+  "id": "ansible-galaxy",
+  "name": "Ansible Galaxy Modules",
+  "options": {
+    "extensions": {
+      "default": "",
+      "description": "Supply a list of pre-installed ansible-galaxy modules",
+      "proposals": [
+        "fortinet.fortianalyzer",
+        "fortinet.fortiadc",
+        "fortinet.fortiamanager",
+        "fortinet.fortiflexvm",
+        "fortinet.fortiswitch",
+        "fortinet.fortios",
+        "fortinet.fortiweb"
+      ],
+      "type": "string"
+    }
+  },
+  "version": "0.0.1"
+}
