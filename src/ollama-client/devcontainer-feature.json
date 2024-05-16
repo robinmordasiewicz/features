@@ -1,0 +1,9 @@
+{
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
+  },
+  "description": "Install ollama client",
+  "id": "ollama-client",
+  "name": "ollama-client",
+  "version": "0.0.1"
+}
