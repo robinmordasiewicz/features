@@ -1,6 +1,8 @@
 {
   "dependsOn": {
-    "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
+    "ghcr.io/rocker-org/devcontainer-features/miniforge": {},
+    "ghcr.io/devcontainers/features/common-utils": {},
+    "ghcr.io/robinmordasiewicz/features/update-conda": {}
   },
   "description": "Create the python environment for autogen",
   "id": "autogen-environment",
