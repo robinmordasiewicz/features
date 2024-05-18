@@ -4,7 +4,7 @@
 set -e
 
 # Define the target and the link locations
-TARGET_FILE="/workspace/autogenstudio/dbdefaults.json"
+TARGET_FILE="/workspaces/autogenstudio/dbdefaults.json"
 SEARCH_PATH="/usr/local/lib"
 FILENAME="dbdefaults.json"
 
