@@ -5,7 +5,7 @@
   "mounts": [
     {
       "source": "${devcontainerId}-autogenstudio",
-      "target": "/data/autogenstudio",
+      "target": "/home/vscode/.autogenstudio",
       "type": "volume"
     }
   ],
