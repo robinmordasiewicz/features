@@ -1,0 +1,14 @@
+{
+  "description": "Preserve Autogen Studio environment",
+  "documentationURL": "https://github.com/joshuanianji/devcontainer-features/tree/main/src/azure-cli-persistence",
+  "id": "autogenstudio-persistence",
+  "mounts": [
+    {
+      "source": "${devcontainerId}-autogenstudio",
+      "target": "/data/autogenstudio",
+      "type": "volume"
+    }
+  ],
+  "name": "Autogen Studio Persistence",
+  "version": "0.0.1"
+}
