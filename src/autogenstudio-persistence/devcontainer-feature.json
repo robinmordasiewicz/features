@@ -1,5 +1,15 @@
 {
   "description": "Preserve Autogen Studio environment",
+  "dependsOn": {
+    "ghcr.io/akhildevelops/devcontainer-features/pip": {
+      "packages": [
+        "autogenstudio"
+      ]
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/akhildevelops/devcontainer-features/pip"
+  ],
   "documentationURL": "https://github.com/joshuanianji/devcontainer-features/tree/main/src/azure-cli-persistence",
   "id": "autogenstudio-persistence",
   "mounts": [
@@ -10,5 +20,5 @@
     }
   ],
   "name": "Autogen Studio Persistence",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
