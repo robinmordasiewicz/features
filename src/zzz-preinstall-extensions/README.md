@@ -1,5 +1,5 @@
 
-# Preinstall Extensions (preinstall-extensions)
+# Preinstall Extensions (zzz-preinstall-extensions)
 
 Preinstall VSCode Extensions
 
@@ -7,7 +7,7 @@ Preinstall VSCode Extensions
 
 ```json
 "features": {
-    "ghcr.io/robinmordasiewicz/features/preinstall-extensions:0": {}
+    "ghcr.io/robinmordasiewicz/features/zzz-preinstall-extensions:0": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Preinstall VSCode Extensions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/preinstall-extensions/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/zzz-preinstall-extensions/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
