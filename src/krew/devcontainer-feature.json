@@ -6,5 +6,5 @@
   "documentationURL": "https://krew.sigs.k8s.io/docs/",
   "id": "krew",
   "name": "krew",
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
