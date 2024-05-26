@@ -18,5 +18,8 @@
       "type": "string"
     }
   },
-  "version": "0.0.1"
+  "installsAfter": [
+    "ghcr.io/robinmordasiewicz/features/mkdocs-environment"
+  ],
+  "version": "0.0.2"
 }
