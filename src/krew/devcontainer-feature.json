@@ -1,7 +1,7 @@
 {
-  "dependsOn": {
-    "ghcr.io/robinmordasiewicz/devcontainers.features/kubectl-helm-minikube": {}
-  },
+  "installsAfter": [
+    "kubectl-helm-minikube"
+  ],
   "description": "Krew is the plugin manager for kubectl command-line tool.",
   "documentationURL": "https://krew.sigs.k8s.io/docs/",
   "id": "krew",

@@ -1,16 +1,5 @@
 {
   "customizations": {
-    "features": {
-      "ghcr.io/itsmechlark/features/postgresql": {},
-      "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
-        "extensions": [
-          "ms-ossdata.vscode-postgresql",
-          "mtxr.sqltools",
-          "mtxr.sqltools-driver-pg"
-        ]
-      },
-      "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
-    },
     "vscode": {
       "settings": {
         "sqltools.connections": [
@@ -32,8 +21,10 @@
   "id": "memgpt-environment",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/robinmordasiewicz/features/update-conda"
+    "ghcr.io/robinmordasiewicz/features/update-conda",
+    "ghcr.io/itsmechlark/features/postgresql",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge"
   ],
   "name": "MeMGPT Python Environment",
-  "version": "0.0.8"
+  "version": "0.0.10"
 }
