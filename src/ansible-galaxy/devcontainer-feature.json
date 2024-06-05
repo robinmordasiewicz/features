@@ -1,7 +1,4 @@
 {
-  "dependsOn": {
-    "ghcr.io/devcontainers-contrib/features/ansible": {}
-  },
   "description": "Install ansible galaxy modules",
   "id": "ansible-galaxy",
   "name": "Ansible Galaxy Modules",
@@ -21,5 +18,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
