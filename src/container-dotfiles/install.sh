@@ -17,6 +17,9 @@ su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init zsh --config /usr/lo
 # shellcheck disable=SC2016
 su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init bash --config /usr/local/share/oh-my-posh/powerlevel10k.omp.json)\"' >> ${_REMOTE_USER_HOME}/.bashrc"
 
+su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.bashrc"
+su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.zshrc"
+
 if command -v az &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "yes y | az config set auto-upgrade.enable=yes"
   su -l "${_REMOTE_USER}" -c "yes y | az config set auto-upgrade.prompt=no"
@@ -36,3 +39,14 @@ if command -v /opt/conda/bin/conda &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda init --all"
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
+
+if ! command -v gh >/dev/null 2>&1; then
+  echo "Install gh first"
+  exit 1
+else
+  if ! gh auth status >/dev/null 2>&1; then
+    echo "You need to login: gh auth login"
+    exit 1
+  fi
+fi
+gh auth status || gh auth login
