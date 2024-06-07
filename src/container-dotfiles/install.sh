@@ -39,14 +39,3 @@ if command -v /opt/conda/bin/conda &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda init --all"
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
-
-if ! command -v gh >/dev/null 2>&1; then
-  echo "Install gh first"
-  exit 1
-else
-  if ! gh auth status >/dev/null 2>&1; then
-    echo "You need to login: gh auth login"
-    exit 1
-  fi
-fi
-gh auth status || gh auth login
