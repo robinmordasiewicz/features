@@ -39,3 +39,6 @@ if command -v /opt/conda/bin/conda &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda init --all"
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
+
+su -l "${_REMOTE_USER}" -c "echo 'gh auth status > /dev/null 2>&1 && echo \"gh auth logged in\" || gh auth login' >> ${_REMOTE_USER_HOME}/.bashrc"
+su -l "${_REMOTE_USER}" -c "echo 'gh auth status > /dev/null 2>&1 && echo \"gh auth logged in\" || gh auth login' >> ${_REMOTE_USER_HOME}/.zshrc"
