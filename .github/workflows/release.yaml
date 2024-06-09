@@ -46,3 +46,11 @@ jobs:
               git push origin "$branch"
               gh pr create --title "$message" --body "$message"
           fi
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: robinmordasiewicz/templates
+          event-type: features
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
