@@ -52,7 +52,14 @@ fi
 su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/helm/linux-amd64/"
 su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/kubectl/linux-amd64/"
 su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/minikube/linux-amd64/"
+su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/helm/linux-arm64/"
+su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/kubectl/linux-arm64/"
+su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/minikube/linux-arm64/"
 
 su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/helm ~/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm"
 su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/kubectl ~/.local/state/vs-kubernetes/tools/kubectl/linux-amd64/kubectl"
 su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/minikube ~/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+
+su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/helm ~/.local/state/vs-kubernetes/tools/helm/linux-arm64/helm"
+su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/kubectl ~/.local/state/vs-kubernetes/tools/kubectl/linux-arm64/kubectl"
+su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/minikube ~/.local/state/vs-kubernetes/tools/minikube/linux-arm64/minikube"
