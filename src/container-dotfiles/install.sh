@@ -19,6 +19,7 @@ su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init bash --config /usr/l
 
 su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.bashrc"
 su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.zshrc"
+su -l "${_REMOTE_USER}" -c "mkdir ~/.kube"
 
 if command -v az &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "yes y | az config set auto-upgrade.enable=yes"

@@ -16,5 +16,5 @@
   "id": "container-dotfiles",
   "installsAfter": [],
   "name": "Container Dotfiles",
-  "version": "0.0.52"
+  "version": "0.0.53"
 }
