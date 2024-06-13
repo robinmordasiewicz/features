@@ -24,9 +24,9 @@ su -l "${_REMOTE_USER}" -c "mkdir ~/.kube"
 if command -v az &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "yes y | az config set auto-upgrade.enable=yes"
   su -l "${_REMOTE_USER}" -c "yes y | az config set auto-upgrade.prompt=no"
-  su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.Kubernetes"
-  su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.ContainerService"
-  su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.KubernetesConfiguration"
+  #su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.Kubernetes"
+  #su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.ContainerService"
+  #su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.KubernetesConfiguration"
   su -l "${_REMOTE_USER}" -c "az extension add -n k8s-configuration"
   su -l "${_REMOTE_USER}" -c "az extension add -n k8s-extension"
 
