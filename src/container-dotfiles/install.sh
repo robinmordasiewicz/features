@@ -29,6 +29,7 @@ if command -v az &>/dev/null; then
   #su -l "${_REMOTE_USER}" -c "az provider register --namespace Microsoft.KubernetesConfiguration"
   su -l "${_REMOTE_USER}" -c "az extension add -n k8s-configuration"
   su -l "${_REMOTE_USER}" -c "az extension add -n k8s-extension"
+  su -l "${_REMOTE_USER}" -c "az extension add -n aks-preview"
 
   if [ ! -d "${_REMOTE_USER_HOME}/.oh-my-zsh/custom" ]; then
     su -l "${_REMOTE_USER}" -c "mkdir -p ${_REMOTE_USER_HOME}/.oh-my-zsh/custom && chown $_REMOTE_USER:${_REMOTE_USER} ${_REMOTE_USER_HOME}/.oh-my-zsh/custom"
