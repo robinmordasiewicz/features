@@ -12,6 +12,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 check_packages locales locales-all
 
+su -l "${_REMOTE_USER}" -c "echo \"+nostats +nocomments +nocmd +noquestion +recurse +search\"' > ${_REMOTE_USER_HOME}/.digrc"
+
 # shellcheck disable=SC2016
 su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init zsh --config /usr/local/share/oh-my-posh/powerlevel10k.omp.json)\"' >> ${_REMOTE_USER_HOME}/.zshrc"
 # shellcheck disable=SC2016
