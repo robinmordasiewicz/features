@@ -17,8 +17,6 @@ su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init zsh --config /usr/lo
 # shellcheck disable=SC2016
 su -l "${_REMOTE_USER}" -c "echo 'eval \"\$(oh-my-posh init bash --config /usr/local/share/oh-my-posh/powerlevel10k.omp.json)\"' >> ${_REMOTE_USER_HOME}/.bashrc"
 
-su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.bashrc"
-su -l "${_REMOTE_USER}" -c "echo 'gh auth status || gh auth login' >> ${_REMOTE_USER_HOME}/.zshrc"
 su -l "${_REMOTE_USER}" -c "mkdir ~/.kube"
 
 if command -v az &>/dev/null; then
@@ -49,13 +47,6 @@ if command -v /opt/conda/bin/conda &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda init --all"
   su -l "${_REMOTE_USER}" -c "/opt/conda/bin/conda config --set changeps1 False"
 fi
-
-su -l "${_REMOTE_USER}" -c "echo 'gh auth status' >> ${_REMOTE_USER_HOME}/.bashrc"
-su -l "${_REMOTE_USER}" -c "echo 'gh auth status' >> ${_REMOTE_USER_HOME}/.zshhrc"
-su -l "${_REMOTE_USER}" -c "echo 'az ad signed-in-user show' >> ${_REMOTE_USER_HOME}/.bashrc"
-su -l "${_REMOTE_USER}" -c "echo 'az ad signed-in-user show' >> ${_REMOTE_USER_HOME}/.zshhrc"
-#su -l "${_REMOTE_USER}" -c "echo '(gh auth status >/dev/null 2>&1 | grep -q \"Logged in to github.com account\") || gh auth login' >> ${_REMOTE_USER_HOME}/.bashrc"
-#su -l "${_REMOTE_USER}" -c "echo '(gh auth status >/dev/null 2>&1 | grep -q \"Logged in to github.com account\") || gh auth login' >> ${_REMOTE_USER_HOME}/.zshrc"
 
 su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/kubectl/"
 su -l "${_REMOTE_USER}" -c "mkdir -p ~/.local/state/vs-kubernetes/tools/helm/linux-amd64/"
