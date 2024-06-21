@@ -60,5 +60,3 @@ su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/minikube ~/.local/state/vs-kubernetes
 
 su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/helm ~/.local/state/vs-kubernetes/tools/helm/linux-arm64/helm"
 su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/minikube ~/.local/state/vs-kubernetes/tools/minikube/linux-arm64/minikube"
-
-chown -R vscode:vscode /dc/shellhistory
