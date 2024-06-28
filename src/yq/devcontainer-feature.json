@@ -1,0 +1,9 @@
+{
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {}
+  },
+  "description": "Install yq",
+  "id": "yq",
+  "name": "yq",
+  "version": "0.0.1"
+}
