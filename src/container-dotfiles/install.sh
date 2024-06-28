@@ -66,3 +66,4 @@ su -l "${_REMOTE_USER}" -c "ln -s /usr/bin/minikube ~/.local/state/vs-kubernetes
 mkdir -p /dc/shellhistory || true
 chown ${_REMOTE_USER}:${_REMOTE_USER} /dc/shellhistory || true
 su -l "${_REMOTE_USER}" -c "mkdir -p /dc/shellhistory || true"
+su -l "${_REMOTE_USER}" -c "oh-my-posh disable notice"
