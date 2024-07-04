@@ -9,5 +9,5 @@
   "description": "opencommit using ollama",
   "id": "opencommit",
   "name": "opencommit",
-  "version": "0.0.19"
+  "version": "0.0.20"
 }

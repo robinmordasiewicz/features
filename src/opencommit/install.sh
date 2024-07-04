@@ -3,7 +3,7 @@ set -ex
 
 directory="/tmp/opencommit"
 old_string="http://localhost:11434/api/chat"
-new_string="https://www.bankexample.com/api/chat"
+new_string="http://www.bankexample.com:11434/api/chat"
 
 if [ -d "${directory}" ]; then
   rm -rf "${directory}"
