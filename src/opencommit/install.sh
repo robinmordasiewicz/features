@@ -2,8 +2,10 @@
 set -ex
 
 directory="/tmp/opencommit"
-old_string="http://localhost:11434/api/chat"
-new_string="http://www.bankexample.com:11434/api/chat"
+old_url="http://localhost:11434/api/chat"
+new_url="http://www.bankexample.com:11434/api/chat"
+old_model="mistral"
+new_model="codestral"
 
 if [ -d "${directory}" ]; then
   rm -rf "${directory}"
@@ -12,8 +14,14 @@ git clone https://github.com/di-sukharev/opencommit.git "${directory}"
 
 cd "${directory}"
 find . -type f -print0 | while IFS= read -r -d '' file; do
-  if grep -q "${old_string}" "${file}"; then
-    echo "${file}" && sed "s|${old_string}|${new_string}|g" "${file}" >"${file}.tmp" && mv -f "${file}.tmp" "${file}"
+  if grep -q "${old_url}" "${file}"; then
+    echo "${file}" && sed "s|${old_url}|${new_url}|g" "${file}" >"${file}.tmp" && mv -f "${file}.tmp" "${file}"
+  fi
+done
+
+find . -type f -print0 | while IFS= read -r -d '' file; do
+  if grep -q "${old_model}" "${file}"; then
+    echo "${file}" && sed "s|${old_model}|${new_model}|g" "${file}" >"${file}.tmp" && mv -f "${file}.tmp" "${file}"
   fi
 done
 
