@@ -32,6 +32,7 @@ if command -v az &>/dev/null; then
   su -l "${_REMOTE_USER}" -c "az extension add -n aks-preview"
 
   su -l "${_REMOTE_USER}" -c "az config set extension.use_dynamic_install=yes_without_prompt"
+  su -l "${_REMOTE_USER}" -c "dotnet tool install --global Microsoft.CognitiveServices.Speech.CLI"
 
   if [ ! -d "${_REMOTE_USER_HOME}/.oh-my-zsh/custom" ]; then
     su -l "${_REMOTE_USER}" -c "mkdir -p ${_REMOTE_USER_HOME}/.oh-my-zsh/custom && chown $_REMOTE_USER:${_REMOTE_USER} ${_REMOTE_USER_HOME}/.oh-my-zsh/custom"
