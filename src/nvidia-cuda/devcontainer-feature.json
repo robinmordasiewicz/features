@@ -8,7 +8,7 @@
   "name": "NVIDIA CUDA",
   "options": {
     "cudaVersion": {
-      "default": "12.5.1",
+      "default": "12.5.1-1",
       "description": "Version of CUDA to install",
       "proposals": [
         "12.5",
