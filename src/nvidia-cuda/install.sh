@@ -2,7 +2,7 @@
 #
 
 set -e
-[ "$(uname -m)" = "amd64" ] || exit 0
+[ "$(uname -m)" = "x86_64" ] || exit 0
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
