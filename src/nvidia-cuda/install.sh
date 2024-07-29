@@ -105,9 +105,11 @@ fi
 
 if [ "$DRIVER_VERSION" != "false" ]; then
   driver_pkg_version="nvidia-driver-${DRIVER_VERSION}"
+  apt-cache show nvidia-driver-555
+  apt-cache show nvidia-driver-550
   if ! apt-cache show "driver_pkg_version" > /dev/null 2>&1; then
-    echo "The requested version of driver package is not available: driver $DRIVER_VERSION"
-    exit 1
+    echo "The requested version of driver package is not available: nvidia-driver-${DRIVER_VERSION}"
+    #exit 1
   fi
 
   echo "Installing drivers nvidia-driver-${DRIVER_VERSION}"

@@ -87,6 +87,7 @@
       "default": "555",
       "description": "Version of driver to install",
       "proposals": [
+        "555",
         "550",
         "530",
         "530",
@@ -97,5 +98,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
