@@ -83,11 +83,6 @@
       "description": "Additionally install NVIDIA CUDA Toolkit",
       "type": "boolean"
     },
-    "installDriver": {
-      "default": false,
-      "description": "Additionally install NVIDIA CUDA Driver",
-      "type": "boolean"
-    },
     "driverVersion": {
       "default": "555",
       "description": "Version of driver to install",
@@ -100,7 +95,7 @@
         "515"
       ],
       "type": "string"
-    },
+    }
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
