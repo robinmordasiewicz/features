@@ -10,6 +10,8 @@ rm -rf /var/lib/apt/lists/*
 INSTALL_CUDNN=${INSTALLCUDNN}
 INSTALL_CUDNNDEV=${INSTALLCUDNNDEV}
 INSTALL_NVTX=${INSTALLNVTX}
+INSTALL_DRIVER=${INSTALLDRIVER}
+DRIVER_VERSION=${DRIVERVERSION}
 INSTALL_TOOLKIT=${INSTALLTOOLKIT}
 CUDA_VERSION=${CUDAVERSION}
 CUDNN_VERSION=${CUDNNVERSION}
@@ -100,6 +102,17 @@ fi
 if [ "$INSTALL_TOOLKIT" = "true" ]; then
   echo "Installing CUDA Toolkit..."
   apt-get install -yq "$toolkit_pkg"
+fi
+
+if [ "$INSTALL_DRIVER" = "true" ]; then
+  driver_pkg_version="nvidia-driver-${DRIVER_VERSION}"
+  if ! apt-cache show "driver_pkg_version"; then
+    echo "The requested version of driver package is not available: driver $DRIVER_VERSION"
+    exit 1
+  fi
+
+  echo "Installing drivers..."
+  apt-get install -yq "$driver_pkg_version"
 fi
 
 # Clean up

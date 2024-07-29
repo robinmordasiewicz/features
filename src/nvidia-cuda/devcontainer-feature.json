@@ -28,9 +28,15 @@
       "type": "string"
     },
     "cudnnVersion": {
-      "default": "8.6.0.163",
+      "default": "9.2.1",
       "description": "Version of cuDNN to install",
       "proposals": [
+        "9.2.1",
+        "9.2.0",
+        "9.1.0",
+        "9.0.0",
+        "8.9.7.29",
+        "8.9.6.50",
         "8.9.5.29",
         "8.9.4.25",
         "8.9.3.28",
@@ -76,7 +82,25 @@
       "default": false,
       "description": "Additionally install NVIDIA CUDA Toolkit",
       "type": "boolean"
-    }
+    },
+    "installDriver": {
+      "default": false,
+      "description": "Additionally install NVIDIA CUDA Driver",
+      "type": "boolean"
+    },
+    "driverVersion": {
+      "default": "555",
+      "description": "Version of driver to install",
+      "proposals": [
+        "550",
+        "530",
+        "530",
+        "525",
+        "520",
+        "515"
+      ],
+      "type": "string"
+    },
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
