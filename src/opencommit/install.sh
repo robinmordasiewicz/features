@@ -3,7 +3,7 @@ set -ex
 
 directory="/tmp/opencommit"
 old_url="http://localhost:11434/api/chat"
-new_url="http://www.bankexample.com:11434/api/chat"
+new_url="http://www.bankexample.com:80/api/chat"
 old_model="mistral"
 new_model="codestral"
 
