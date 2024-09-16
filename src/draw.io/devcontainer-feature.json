@@ -3,7 +3,11 @@
     "ghcr.io/devcontainers-contrib/features/apt-packages": {
       "packages": [
         "libnotify4",
-        "xdg-utils"
+        "xdg-utils",
+        "libappindicator3-1",
+        "xdg-utils",
+        "libdbusmenu-glib4",
+        "libdbusmenu-gtk3-4"
       ]
     },
     "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
@@ -23,5 +27,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
