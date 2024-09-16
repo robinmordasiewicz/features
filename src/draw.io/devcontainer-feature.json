@@ -1,0 +1,27 @@
+{
+  "dependsOn": {
+    "ghcr.io/devcontainers-contrib/features/apt-packages": {
+      "packages": [
+        "libnotify4",
+        "xdg-utils"
+      ]
+    },
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
+    "ghcr.io/robinmordasiewicz/features/zzz-preinstall-extensions": {
+      "extensions": [
+        "hediet.vscode-drawio"
+      ]
+    }
+  },
+  "description": "draw.io",
+  "id": "draw.io",
+  "name": "Preinstall Extensions",
+  "options": {
+    "extensions": {
+      "default": "",
+      "description": "Installs draw.io",
+      "type": "string"
+    }
+  },
+  "version": "0.0.1"
+}
