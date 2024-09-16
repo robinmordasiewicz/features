@@ -5,7 +5,7 @@ check_packages() {
   if ! dpkg -s "$@" >/dev/null 2>&1; then
     apt-get update -y
     apt-get -y install --no-install-recommends "$@"
-    apt-get -y upgrade
+    apt -y upgrade
   fi
 }
 
