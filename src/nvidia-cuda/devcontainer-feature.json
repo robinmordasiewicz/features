@@ -8,9 +8,10 @@
   "name": "NVIDIA CUDA",
   "options": {
     "cudaVersion": {
-      "default": "12.5",
+      "default": "12.6",
       "description": "Version of CUDA to install",
       "proposals": [
+        "12.6",
         "12.5",
         "12.4",
         "12.3",
@@ -63,6 +64,20 @@
       ],
       "type": "string"
     },
+    "driverVersion": {
+      "default": "555",
+      "description": "Version of driver to install",
+      "proposals": [
+        "555",
+        "550",
+        "530",
+        "530",
+        "525",
+        "520",
+        "515"
+      ],
+      "type": "string"
+    },
     "installCudnn": {
       "default": false,
       "description": "Additionally install CUDA Deep Neural Network (cuDNN) shared library",
@@ -82,21 +97,7 @@
       "default": false,
       "description": "Additionally install NVIDIA CUDA Toolkit",
       "type": "boolean"
-    },
-    "driverVersion": {
-      "default": "555",
-      "description": "Version of driver to install",
-      "proposals": [
-        "555",
-        "550",
-        "530",
-        "530",
-        "525",
-        "520",
-        "515"
-      ],
-      "type": "string"
     }
   },
-  "version": "0.0.8"
+  "version": "0.0.9"
 }
