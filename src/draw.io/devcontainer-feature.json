@@ -7,7 +7,10 @@
         "libappindicator3-1",
         "xdg-utils",
         "libdbusmenu-glib4",
-        "libdbusmenu-gtk3-4"
+        "libdbusmenu-gtk3-4",
+        "libgl1-mesa-glx",
+        "libglx-mesa0",
+        "libgl1-mesa-glx"
       ]
     },
     "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
@@ -27,5 +30,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
