@@ -65,9 +65,10 @@
       "type": "string"
     },
     "driverVersion": {
-      "default": "555",
+      "default": "560",
       "description": "Version of driver to install",
       "proposals": [
+        "560",
         "555",
         "550",
         "530",
