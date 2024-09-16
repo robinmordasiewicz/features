@@ -3,14 +3,17 @@
     "ghcr.io/devcontainers-contrib/features/apt-packages": {
       "packages": [
         "libnotify4",
-        "xdg-utils",
         "libappindicator3-1",
-        "xdg-utils",
         "libdbusmenu-glib4",
         "libdbusmenu-gtk3-4",
+        "libgl1-mesa-dri",
         "libgl1-mesa-glx",
         "libglx-mesa0",
-        "libgl1-mesa-glx"
+        "libvulkan1",
+        "mesa-utils",
+        "mesa-utils-bin",
+        "mesa-vulkan-drivers",
+        "xdg-utils"
       ]
     },
     "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
@@ -30,5 +33,5 @@
       "type": "string"
     }
   },
-  "version": "0.0.3"
+  "version": "0.0.5"
 }
