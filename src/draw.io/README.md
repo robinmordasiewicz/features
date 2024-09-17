@@ -1,13 +1,13 @@
 
-# Preinstall Extensions (zzz-preinstall-extensions)
+# Preinstall Extensions (draw.io)
 
-Preinstall VSCode Extensions
+draw.io
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/robinmordasiewicz/features/zzz-preinstall-extensions:0": {}
+    "ghcr.io/robinmordasiewicz/features/draw.io:0": {}
 }
 ```
 
@@ -15,10 +15,10 @@ Preinstall VSCode Extensions
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| extensions | Supply a list of pre-installed extensions | string | - |
+| extensions | Installs draw.io | string | - |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/zzz-preinstall-extensions/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/robinmordasiewicz/features/blob/main/src/draw.io/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
