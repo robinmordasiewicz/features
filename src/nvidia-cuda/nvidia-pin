@@ -1,0 +1,56 @@
+Package: nvidia-driver-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: nvidia-dkms-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: nvidia-kernel-common-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: nvidia-kernel-source-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-extra-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: nvidia-compute-utils-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: nvidia-utils-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: xserver-xorg-video-nvidia-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-cfg1-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-gl-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-compute-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-decode-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-encode-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
+Package: libnvidia-fbc1-550
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+

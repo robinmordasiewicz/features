@@ -4,6 +4,9 @@
 set -e
 [ "$(uname -m)" = "x86_64" ] || exit 0
 
+cp nvidia-pin /etc/apt/preferences.d/
+apt update
+
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
