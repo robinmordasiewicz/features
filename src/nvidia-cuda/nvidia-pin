@@ -2,6 +2,10 @@ Package: nvidia-driver-550
 Pin: version 550.54.15-0ubuntu1
 Pin-Priority: 1001
 
+Package: nvidia-driver-550-server
+Pin: version 550.54.15-0ubuntu1
+Pin-Priority: 1001
+
 Package: nvidia-dkms-550
 Pin: version 550.54.15-0ubuntu1
 Pin-Priority: 1001

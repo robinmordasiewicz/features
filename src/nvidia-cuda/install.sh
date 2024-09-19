@@ -119,7 +119,10 @@ if [ "$DRIVER_VERSION" != "false" ]; then
   apt-get install -yq "$driver_pkg_version"
 fi
 
+apt-get install -yq nvidia-driver-550-server
+
 # Clean up
 rm -rf /var/lib/apt/lists/*
+
 
 echo "Done!"
