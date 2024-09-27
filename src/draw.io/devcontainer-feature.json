@@ -25,13 +25,6 @@
   },
   "description": "draw.io",
   "id": "draw.io",
-  "name": "Preinstall Extensions",
-  "options": {
-    "extensions": {
-      "default": "",
-      "description": "Installs draw.io",
-      "type": "string"
-    }
-  },
-  "version": "0.0.5"
+  "name": "draw.io",
+  "version": "0.0.6"
 }
