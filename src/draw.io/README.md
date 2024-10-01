@@ -1,5 +1,5 @@
 
-# Preinstall Extensions (draw.io)
+# draw.io (draw.io)
 
 draw.io
 
@@ -11,11 +11,7 @@ draw.io
 }
 ```
 
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| extensions | Installs draw.io | string | - |
 
 
 
