@@ -21,10 +21,8 @@
   "id": "memgpt-environment",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/robinmordasiewicz/features/update-conda",
-    "ghcr.io/itsmechlark/features/postgresql",
-    "ghcr.io/rocker-org/devcontainer-features/miniforge"
+    "ghcr.io/itsmechlark/features/postgresql"
   ],
   "name": "MeMGPT Python Environment",
-  "version": "0.0.10"
+  "version": "0.0.11"
 }

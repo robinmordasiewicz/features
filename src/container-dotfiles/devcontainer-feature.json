@@ -9,12 +9,11 @@
     "ghcr.io/robinmordasiewicz/features/lsd": {},
     "ghcr.io/robinmordasiewicz/features/nerd-fonts": {},
     "ghcr.io/robinmordasiewicz/features/oh-my-posh": {},
-    "ghcr.io/robinmordasiewicz/features/tfenv": {},
-    "ghcr.io/robinmordasiewicz/features/update-conda": {}
+    "ghcr.io/robinmordasiewicz/features/tfenv": {}
   },
   "description": "Install shell shell rc files into container.",
   "id": "container-dotfiles",
   "installsAfter": [],
   "name": "Container Dotfiles",
-  "version": "0.0.74"
+  "version": "0.0.75"
 }

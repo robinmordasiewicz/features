@@ -3,9 +3,8 @@
   "id": "openwebui-environment",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/anaconda",
-    "ghcr.io/robinmordasiewicz/features/update-conda"
+    "ghcr.io/devcontainers/features/anaconda"
   ],
   "name": "OpenWeb UI Python Environment",
-  "version": "0.0.4"
+  "version": "0.0.5"
 }

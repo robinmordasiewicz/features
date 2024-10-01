@@ -5,10 +5,9 @@
   "description": "Create the python environment for mkdocs serve and compiling",
   "id": "mkdocs-environment",
   "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/robinmordasiewicz/features/update-conda"
+    "ghcr.io/devcontainers/features/common-utils"
   ],
   "name": "MkDocs Python Environment",
   "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval \"$(conda shell.bash hook)\" >/dev/null 2>&1 && conda activate mkdocs && nohup bash -c 'mkdocs serve &' >/tmp/mkdocs.tmp",
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
