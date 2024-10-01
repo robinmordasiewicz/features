@@ -1,6 +1,6 @@
 {
   "dependsOn": {
-    "ghcr.io/rocker-org/devcontainer-features/miniforge": {}
+    "ghcr.io/devcontainers/features/anaconda": {}
   },
   "description": "Create the python environment for mkdocs serve and compiling",
   "id": "mkdocs-environment",
@@ -10,5 +10,5 @@
   ],
   "name": "MkDocs Python Environment",
   "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval \"$(conda shell.bash hook)\" >/dev/null 2>&1 && conda activate mkdocs && nohup bash -c 'mkdocs serve &' >/tmp/mkdocs.tmp",
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
