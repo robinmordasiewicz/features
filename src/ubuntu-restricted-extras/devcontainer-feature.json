@@ -1,6 +1,9 @@
 {
   "description": "ubuntu-restricted-extras",
   "id": "ubuntu-restricted-extras",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ],
   "name": "ubuntu-restricted-extras",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
