@@ -1,0 +1,6 @@
+{
+  "description": "cmctl is a command line tool that can help you manage cert-manager and its resources inside your cluster.",
+  "id": "cmctl",
+  "name": "cmctl",
+  "version": "0.0.1"
+}
